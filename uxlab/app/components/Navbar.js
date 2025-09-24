@@ -11,7 +11,7 @@ const Navbar = () => {
         
         <Link href="/" style={{display:'inline-flex', alignItems:'center', justifyContent:'center'}}>
           <img
-            src="/UXLabb.svg"
+            src="/UXLab.webp"
             alt="UXLab Logo"
             height={45}
             style={{width:'auto', display:'block'}}

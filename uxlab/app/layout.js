@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body 
         className={`${satoshi.className}`}
         style={{
-          backgroundImage: 'radial-gradient(80% 80% at 50% 50%, #1A1A1A 20%, #000000 100%)',
+          backgroundImage: 'radial-gradient(80% 80% at 50% 50%, #1A1A1A 10%, #000000 100%)',
           backgroundColor: '#000000',
           minHeight: '100vh',
           color: '#ffffff',
