@@ -29,14 +29,19 @@ export default function RootLayout({ children }) {
         <footer
           style={{
             position: 'fixed',
-            left: '50%',
-            transform: 'translateX(-50%)',
+            right: '20px',
             bottom: '20px',
-            textAlign: 'center',
+            textAlign: 'right',
             color: '#9DA4A8',
             fontSize: '16px',
-            width: '100%',
-            pointerEvents: 'none'
+            width: 'auto',
+            padding: '12px 24px',
+            borderRadius: '16px',
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            pointerEvents: 'none',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
           }}
         >
           © Lidya Marthadilla. All rights reserved.

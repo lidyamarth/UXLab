@@ -7,10 +7,10 @@ const Navbar = () => {
   const isHome = pathname === '/';
   const isLaws = pathname === '/laws';
   return (
-    <header style={{position:'absolute', left:'50%', top:'20px', transform:'translateX(-50%)', zIndex:20, width:'100%', maxWidth:'72rem'}}>
+    <header style={{position:'absolute', left:'50%', top:'12px', transform:'translateX(-50%)', zIndex:20, width:'100%', maxWidth:'72rem'}}>
       <style>{`header nav a:hover { color: #9DA4A8 !important; }`}</style>
       <nav style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'120px', width:'100%'}}>
-        <Link href="/" style={{color:'#ffffff', textDecoration:'none', fontSize:'20px', fontWeight: isHome ? 500 : 400, fontStyle: isHome ? 'italic' : 'normal'}}>
+        <Link href="/" style={{color:'#ffffff', textDecoration:'none', fontSize:'16px', fontWeight: isHome ? 500 : 400, fontStyle: isHome ? 'italic' : 'normal'}}>
           Home
         </Link>
         
@@ -18,13 +18,13 @@ const Navbar = () => {
           <img
             src="/UXLab.webp"
             alt="UXLab Logo"
-            height={45}
+            height={36}
             style={{width:'auto', display:'block'}}
             draggable={false}
           />
         </Link>
         
-        <Link href="/laws" style={{color:'#ffffff', textDecoration:'none', fontSize:'20px', fontWeight: isLaws ? 500 : 400, fontStyle: isLaws ? 'italic' : 'normal'}}>
+        <Link href="/laws" style={{color:'#ffffff', textDecoration:'none', fontSize:'16px', fontWeight: isLaws ? 500 : 400, fontStyle: isLaws ? 'italic' : 'normal'}}>
           Laws
         </Link>
       </nav>
