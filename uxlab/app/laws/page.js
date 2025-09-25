@@ -44,10 +44,10 @@ export default function LawsPage() {
   return (
     <>
       <Navbar />
-      <main className="relative min-h-screen w-full" style={{color:'#ffffff', padding:0, overflowX:'hidden'}}>
+      <main className="relative min-h-screen w-full" style={{color:'#ffffff', padding:0, overflow:'hidden'}}>
         <style>{`
-          .laws-frame { position: relative; width: 100%; max-width: 1440px; height: 1024px; margin: 0 auto; overflow: hidden; padding: 0; }
-          .carousel-stage { position: absolute; left: 50%; top: 220px; transform: translateX(-50%); width: 100%; max-width: 1440px; height: 650px; pointer-events: none; }
+          .laws-frame { position: relative; width: 100vw; height: 1024px; margin: 0; overflow: hidden; padding: 0; }
+          .carousel-stage { position: absolute; left: 0; top: 220px; transform: none; width: 100vw; height: 650px; pointer-events: none; }
           .card { position: absolute; width: 230px; height: 230px; border-radius: 32px; overflow: hidden; will-change: transform, opacity, filter; }
           .card img, .card svg { width: 100%; height: 100%; object-fit: cover; display: block; }
           .card-inner { width: 100%; height: 100%; display: grid; place-items: center; }
@@ -67,14 +67,9 @@ export default function LawsPage() {
           @media (prefers-reduced-motion: reduce) {
             .card, .fade-slide-in, .title-in, .desc-in, .btn-in { animation: none !important; transition: none !important; }
           }
-          .edge-mask { position: absolute; top: 0; bottom: 0; width: 48px; pointer-events: none; z-index: 30; }
-          .edge-mask.left { left: 0; background: linear-gradient(90deg, #0b0b0b 0%, rgba(11,11,11,0.92) 60%, rgba(11,11,11,0) 100%); }
-          .edge-mask.right { right: 0; background: linear-gradient(270deg, #0b0b0b 0%, rgba(11,11,11,0.92) 60%, rgba(11,11,11,0) 100%); }
         `}</style>
 
         <div className="laws-frame" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-          <div className="edge-mask left" />
-          <div className="edge-mask right" />
         <div className="carousel-stage">
           {items.map((item, idx) => {
             
