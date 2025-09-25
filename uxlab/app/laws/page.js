@@ -376,7 +376,7 @@ export default function LawsPage() {
             <div style={{width:'450px'}} className="fade-slide-in">
                 <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center'}}>
                   <h1 className="title-in" style={{fontSize:'32px', fontWeight:500, marginBottom:'-8px'}}>{items[active].title}</h1>
-                  <p className="desc-in" style={{fontSize:'18px', marginBottom:'44px'}}>{items[active].desc}</p>
+                  <p className="desc-in" style={{fontSize:'18px', marginBottom:'44px', color:'#808080'}}>{items[active].desc}</p>
                   <button 
                     className="btn-in" 
                     onClick={() => {
