@@ -94,7 +94,7 @@ const HomePage = () => {
         <div style={containerStyles}>
           <div style={flexWrapper}>
             <img
-              src="/neraca.webp"
+              src="/interaction.webp"
               alt="Ilustrasi Neraca Keadilan"
               width={260}
               height={260}
@@ -109,7 +109,7 @@ const HomePage = () => {
               className="max-w-4xl text-5xl text-white mb-[4px] text-center enter-stack-2" 
               style={{fontWeight: 500}}
             >
-              Learn UX Laws by Doing
+              Virtual Interactive Learning on UX Laws
             </h1>
             <p 
               className="text-2xl font-normal text-white text-center enter-stack-3" 
