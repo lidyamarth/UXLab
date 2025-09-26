@@ -10,6 +10,7 @@ Melalui simulasi langsung, pengguna dapat merasakan bagaimana hukum psikologi me
 - Ringkasan teori singkat + insight praktis setelah eksperimen.  
 - Tampilan modern dengan animasi ringan dan interaktif.
 
-## Dibuat Oleh
+# Dibuat Oleh
 **Lidya Marthadilla** 
+
 **18223134** 
