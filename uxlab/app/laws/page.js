@@ -2,15 +2,407 @@
 import { useEffect, useMemo, useState } from 'react';
 import Navbar from '../components/Navbar';
 
+// placeholder
+const lawContent = {
+  'hick': {
+    title: "Hick's Law",
+    shortDescription: "Waktu untuk mengambil keputusan bertambah seiring banyaknya dan rumitnya pilihan.",
+    detailedDescription: "Hick's Law menyatakan bahwa waktu yang dibutuhkan untuk membuat keputusan meningkat secara logaritmik dengan jumlah pilihan yang tersedia. Semakin banyak opsi yang diberikan kepada user, semakin lama waktu yang dibutuhkan untuk memilih.",
+    keyTakeaways: [
+      "Batasi jumlah pilihan dalam menu utama (maksimal 7 item)",
+      "Gunakan progressive disclosure untuk menyembunyikan opsi lanjutan",
+      "Kelompokkan pilihan yang mirip untuk mengurangi cognitive load",
+      "Prioritaskan opsi yang paling sering digunakan"
+    ],
+    images: [
+      {
+        src: "/hicks.webp",
+        alt: "Contoh menu dengan banyak pilihan",
+        description: "Menu dengan terlalu banyak pilihan dapat membingungkan user dan memperlambat pengambilan keputusan"
+      }
+    ],
+    examples: [
+      "Menu restoran dengan 50+ item vs menu dengan kategori yang jelas",
+      "Form pendaftaran dengan 20 field vs form bertahap",
+      "Dashboard dengan 15 widget vs dashboard yang terorganisir"
+    ]
+  },
+  'fitts': {
+    title: "Fitts's Law",
+    shortDescription: "Waktu untuk mencapai target dipengaruhi oleh ukuran dan jaraknya.",
+    detailedDescription: "Fitts's Law menjelaskan bahwa waktu yang dibutuhkan untuk bergerak ke target adalah fungsi dari jarak ke target dan ukuran target. Target yang lebih besar dan lebih dekat lebih mudah dicapai.",
+    keyTakeaways: [
+      "Buat tombol penting cukup besar untuk mudah diklik",
+      "Letakkan elemen penting di area yang mudah dijangkau",
+      "Manfaatkan edge screen untuk target yang sering digunakan",
+      "Pertimbangkan ukuran jari untuk desain mobile"
+    ],
+    images: [
+      {
+        src: "/fitts.svg",
+        alt: "Ilustrasi Fitts's Law",
+        description: "Target besar dan dekat lebih mudah dicapai daripada target kecil dan jauh"
+      }
+    ],
+    examples: [
+      "Tombol 'Submit' yang besar vs tombol kecil",
+      "Menu hamburger di pojok kiri atas (edge screen)",
+      "Tombol back di iOS yang memanfaatkan edge screen"
+    ]
+  },
+  'jakob': {
+    title: "Jakob's Law",
+    shortDescription: "User menyukai pola yang sudah familiar.",
+    detailedDescription: "Jakob's Law menyatakan bahwa user menghabiskan sebagian besar waktu mereka di website lain. Oleh karena itu, mereka lebih menyukai interface yang mengikuti pola yang sudah familiar dan diharapkan.",
+    keyTakeaways: [
+      "Gunakan ikon standar yang sudah dikenal user",
+      "Letakkan elemen di posisi yang diharapkan",
+      "Ikuti konvensi platform (iOS vs Android)",
+      "Hindari desain yang terlalu kreatif untuk fungsi dasar"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Contoh ikon familiar",
+        description: "Ikon standar seperti home, profile, dan settings lebih mudah dikenali user"
+      }
+    ],
+    examples: [
+      "Ikon rumah untuk home, ikon gear untuk settings",
+      "Logo di kiri atas, menu di kanan atas",
+      "Tombol back di kiri atas untuk mobile"
+    ]
+  },
+  'miller': {
+    title: "Miller's Law",
+    shortDescription: "Short-term memory rata-rata 7±2 item.",
+    detailedDescription: "Miller's Law didasarkan pada penelitian yang menunjukkan bahwa kapasitas short-term memory manusia terbatas pada 7±2 item. Ini berarti kita hanya bisa mengingat sekitar 5-9 item dalam waktu singkat.",
+    keyTakeaways: [
+      "Batasi menu utama maksimal 7 item",
+      "Gunakan chunking untuk mengelompokkan informasi",
+      "Berikan feedback visual untuk membantu mengingat",
+      "Hindari overload informasi dalam satu layar"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Contoh chunking informasi",
+        description: "Mengelompokkan informasi dalam chunk yang mudah diingat"
+      }
+    ],
+    examples: [
+      "Nomor telepon: 0812-3456-7890 (chunked) vs 081234567890",
+      "Menu dengan 5 kategori vs menu dengan 15 item",
+      "Form dengan section yang jelas vs form panjang"
+    ]
+  },
+  'proximity': {
+    title: "Law of Proximity",
+    shortDescription: "Elemen yang berdekatan dipersepsikan memiliki keterkaitan.",
+    detailedDescription: "Law of Proximity menyatakan bahwa elemen visual yang berdekatan dipersepsikan sebagai satu kelompok atau memiliki hubungan. Ini adalah prinsip dasar dalam desain visual dan UX.",
+    keyTakeaways: [
+      "Gunakan whitespace untuk memisahkan kelompok yang berbeda",
+      "Letakkan elemen terkait berdekatan",
+      "Gunakan visual grouping untuk meningkatkan scanability",
+      "Pertimbangkan jarak dalam grid layout"
+    ],
+    images: [
+      {
+        src: "/window.svg",
+        alt: "Contoh grouping dengan proximity",
+        description: "Elemen yang berdekatan terlihat sebagai satu kelompok"
+      }
+    ],
+    examples: [
+      "Form dengan label dekat input field",
+      "Card design dengan elemen terkait berdekatan",
+      "Navigation menu dengan item terkait dalam grup"
+    ]
+  },
+  'peak-end': {
+    title: "Peak-End Rule",
+    shortDescription: "Pengalaman dinilai dari puncak emosional dan akhir.",
+    detailedDescription: "Peak-End Rule menyatakan bahwa pengalaman dinilai berdasarkan puncak emosional (baik positif maupun negatif) dan bagaimana pengalaman berakhir, bukan rata-rata keseluruhan pengalaman.",
+    keyTakeaways: [
+      "Pastikan akhir pengalaman selalu positif",
+      "Ciptakan momen yang memorable",
+      "Minimalkan friction di tengah proses",
+      "Berikan feedback yang jelas di setiap langkah"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Grafik Peak-End Rule",
+        description: "Pengalaman dinilai dari puncak dan akhir, bukan rata-rata"
+      }
+    ],
+    examples: [
+      "Checkout process dengan konfirmasi yang menyenangkan",
+      "Onboarding dengan welcome message yang hangat",
+      "Error handling yang helpful dan tidak menyalahkan user"
+    ]
+  },
+  'serial-position': {
+    title: "Serial Position Effect",
+    shortDescription: "Item di awal dan akhir lebih mudah diingat.",
+    detailedDescription: "Serial Position Effect menjelaskan bahwa item di posisi awal (primacy effect) dan akhir (recency effect) dalam sebuah daftar lebih mudah diingat daripada item di tengah.",
+    keyTakeaways: [
+      "Letakkan informasi penting di awal dan akhir list",
+      "Gunakan breadcrumb untuk navigasi",
+      "Highlight item terakhir yang diakses",
+      "Pertimbangkan urutan dalam menu dan form"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Contoh serial position effect",
+        description: "Item pertama dan terakhir lebih mudah diingat"
+      }
+    ],
+    examples: [
+      "Menu dengan item penting di awal dan akhir",
+      "Form dengan field penting di awal",
+      "Search results dengan item relevan di posisi awal"
+    ]
+  },
+  'similarity': {
+    title: "Law of Similarity",
+    shortDescription: "Elemen yang mirip dipersepsikan sebagai satu kelompok.",
+    detailedDescription: "Law of Similarity menyatakan bahwa elemen visual yang memiliki karakteristik yang sama (warna, bentuk, ukuran, orientasi) akan dipersepsikan sebagai satu kelompok atau memiliki hubungan.",
+    keyTakeaways: [
+      "Gunakan warna konsisten untuk elemen yang terkait",
+      "Buat tombol dengan style yang sama untuk fungsi serupa",
+      "Gunakan typography yang konsisten untuk hierarki",
+      "Kelompokkan elemen dengan bentuk atau ukuran yang mirip"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Contoh law of similarity",
+        description: "Elemen dengan warna dan bentuk yang sama terlihat sebagai satu kelompok"
+      }
+    ],
+    examples: [
+      "Tombol dengan warna yang sama untuk fungsi serupa",
+      "Card design dengan style yang konsisten",
+      "Navigation menu dengan ikon yang seragam"
+    ]
+  },
+  'closure': {
+    title: "Law of Closure",
+    shortDescription: "Mata cenderung melengkapi bentuk yang tidak lengkap.",
+    detailedDescription: "Law of Closure menjelaskan bahwa otak manusia cenderung melengkapi bentuk atau pola yang tidak lengkap untuk menciptakan gambaran yang utuh dan bermakna.",
+    keyTakeaways: [
+      "Gunakan bentuk yang tidak lengkap untuk menarik perhatian",
+      "Manfaatkan whitespace untuk menciptakan ilusi bentuk",
+      "Gunakan loading states yang menunjukkan progress",
+      "Buat desain yang memungkinkan user melengkapi pola"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Contoh law of closure",
+        description: "Bentuk yang tidak lengkap membuat user ingin melengkapinya"
+      }
+    ],
+    examples: [
+      "Loading spinner yang menunjukkan progress",
+      "Card design dengan border yang tidak lengkap",
+      "Icon yang menggunakan negative space"
+    ]
+  },
+  'continuity': {
+    title: "Law of Continuity",
+    shortDescription: "Mata mengikuti garis dan kurva yang halus.",
+    detailedDescription: "Law of Continuity menyatakan bahwa mata manusia cenderung mengikuti garis dan kurva yang halus, dan mempersepsikan elemen yang berada dalam garis yang sama sebagai satu kelompok.",
+    keyTakeaways: [
+      "Gunakan garis untuk memandu mata user",
+      "Buat flow yang natural dalam layout",
+      "Gunakan alignment yang konsisten",
+      "Manfaatkan kurva untuk menciptakan flow yang halus"
+    ],
+    images: [
+      {
+        src: "/UXLab.svg",
+        alt: "Contoh law of continuity",
+        description: "Garis dan kurva memandu mata user mengikuti alur yang diinginkan"
+      }
+    ],
+    examples: [
+      "Timeline dengan garis yang menghubungkan event",
+      "Form dengan flow yang natural dari atas ke bawah",
+      "Carousel dengan indikator yang menunjukkan progress"
+    ]
+  }
+};
+
+function DetailedExplanation({ law }) {
+  const lawKey = law.key.split('-')[0]; 
+  const content = lawContent[lawKey] || {
+    title: law.title,
+    shortDescription: law.desc,
+    detailedDescription: "Penjelasan detail untuk " + law.title + " akan segera tersedia.",
+    keyTakeaways: [
+      "Key takeaway 1 akan ditambahkan",
+      "Key takeaway 2 akan ditambahkan",
+      "Key takeaway 3 akan ditambahkan"
+    ],
+    images: [
+      {
+        src: law.img,
+        alt: "Ilustrasi " + law.title,
+        description: "Deskripsi gambar akan ditambahkan"
+      }
+    ],
+    examples: [
+      "Contoh aplikasi 1",
+      "Contoh aplikasi 2",
+      "Contoh aplikasi 3"
+    ]
+  };
+
+  return (
+      <div>
+        <h2 style={{
+          textAlign:'center',
+          fontSize:'32px',
+          fontWeight:'bold',
+          fontFamily:'Satoshi',
+          background: 'linear-gradient(135deg, #d8e63c 0%, #a8d83c 50%, #8eb940 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          marginBottom:'20px',
+          //textShadow:'0 2px 4px rgba(100,100,100, 100)'
+        }}>
+          Get to Know
+        </h2>
+      
+      <div style={{marginBottom:'30px'}}>
+        <p style={{opacity:0.9, lineHeight:1.7, fontSize:'20px', fontWeight:400, marginBottom:'16px'}}>
+          {content.detailedDescription}
+        </p>
+      </div>
+
+      <div style={{marginBottom:'30px'}}>
+        <h3 style={{fontSize:'24px', fontWeight:600, marginBottom:'16px', color:'#ffffff'}}>
+          Key Takeaways
+        </h3>
+        <div style={{display:'flex', flexDirection:'column', gap:'16px'}}>
+          {content.keyTakeaways.map((takeaway, index) => (
+            <div key={index} style={{
+              display:'flex',
+              alignItems:'flex-start',
+              gap:'16px'
+            }}>
+              <div style={{
+                width: 32, 
+                height: 32,
+                padding: 10, 
+                borderRadius: 18, 
+                outline: '1px white solid', 
+                outlineOffset: '-1px', 
+                flexDirection: 'column', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                display: 'inline-flex',
+                flexShrink: 0
+              }}>
+                <div style={{
+                  alignSelf: 'stretch', 
+                  textAlign: 'center', 
+                  color: 'white', 
+                  fontSize: 20, 
+                  fontFamily: 'Satoshi', 
+                  fontStyle: 'italic', 
+                  fontWeight: '400', 
+                  wordWrap: 'break-word'
+                }}>
+                  {index + 1}.
+                </div>
+              </div>
+              <div style={{
+                flex: 1,
+                padding:'12px 0',
+                display:'flex',
+                alignItems:'center'
+              }}>
+                <span style={{opacity:0.9, lineHeight:1.6, fontSize:'20px', color:'white'}}>{takeaway}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{marginBottom:'30px'}}>
+        <h3 style={{fontSize:'22px', fontWeight:600, marginBottom:'16px', color:'#ffffff'}}>
+          Contoh Aplikasi
+        </h3>
+        <div style={{display:'grid', gap:'16px'}}>
+          {content.examples.map((example, index) => (
+            <div key={index} style={{
+              padding:'16px',
+              background:'rgba(255, 255, 255, 0.05)',
+              borderRadius:'12px',
+              border:'1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <span style={{opacity:0.9, lineHeight:1.6}}>{example}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{marginBottom:'30px'}}>
+        <h3 style={{fontSize:'22px', fontWeight:600, marginBottom:'16px', color:'#ffffff'}}>
+          Ilustrasi
+        </h3>
+        <div style={{display:'grid', gap:'20px'}}>
+          {content.images.map((image, index) => (
+            <div key={index} style={{
+              textAlign:'center',
+              padding:'20px',
+              background:'rgba(255, 255, 255, 0.05)',
+              borderRadius:'12px',
+              border:'1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <img 
+                src={image.src} 
+                alt={image.alt}
+                style={{
+                  maxWidth:'100%',
+                  height:'auto',
+                  borderRadius:'8px',
+                  marginBottom:'12px'
+                }}
+              />
+              <p style={{
+                opacity:0.8,
+                fontSize:'14px',
+                lineHeight:1.5,
+                fontStyle:'italic'
+              }}>
+                {image.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function LawsPage() {
   const baseItems = useMemo(() => ([
-    { key: 'hick', title: "Hick's Law", desc: 'Waktu untuk mengambil keputusan bertambah seiring banyaknya dan rumitnya pilihan.', img: '/hicks.webp' },
-    { key: 'fitts', title: "Fitts's Law", desc: 'Waktu untuk mencapai target dipengaruhi oleh ukuran dan jaraknya.', img: '/fitts.svg', bg: '#E74C3C' },
-    { key: 'jakob', title: "Jakob's Law", desc: 'User menyukai pola yang sudah familiar.', img: '/UXLab.svg', bg: '#2D9CDB' },
-    { key: 'miller', title: "Miller's Law", desc: 'Short-term memory rata-rata 7±2 item.', img: '/UXLab.svg', bg: '#56CCF2' },
-    { key: 'proximity', title: 'Law of Proximity', desc: 'Elemen yang berdekatan dipersepsikan memiliki keterkaitan.', img: '/window.svg', bg: '#F2C94C' },
-    { key: 'peak-end', title: 'Peak-End Rule', desc: 'Pengalaman dinilai dari puncak emosional dan akhir.', img: '/UXLab.svg', bg: '#FF6B6B' },
-    { key: 'serial-position', title: 'Serial Position Effect', desc: 'Item di awal dan akhir lebih mudah diingat.', img: '/UXLab.svg', bg: '#4ECDC4' },
+    { key: 'hick', title: "Hick's Law", desc: 'Waktu untuk mengambil keputusan bertambah seiring banyaknya dan rumitnya pilihan.', img: '/hicks.webp', hasGame: true },
+    { key: 'fitts', title: "Fitts's Law", desc: 'Waktu untuk mencapai target dipengaruhi oleh ukuran dan jaraknya.', img: '/fitts.svg', bg: '#E74C3C', hasGame: true },
+    { key: 'jakob', title: "Jakob's Law", desc: 'User menyukai pola yang sudah familiar.', img: '/UXLab.svg', bg: '#2D9CDB', hasGame: true },
+    { key: 'miller', title: "Miller's Law", desc: 'Short-term memory rata-rata 7±2 item.', img: '/UXLab.svg', bg: '#56CCF2', hasGame: true },
+    { key: 'proximity', title: 'Law of Proximity', desc: 'Elemen yang berdekatan dipersepsikan memiliki keterkaitan.', img: '/window.svg', bg: '#F2C94C', hasGame: true },
+    { key: 'peak-end', title: 'Peak-End Rule', desc: 'Pengalaman dinilai dari puncak emosional dan akhir.', img: '/UXLab.svg', bg: '#FF6B6B', hasGame: true },
+    { key: 'serial-position', title: 'Serial Position Effect', desc: 'Item di awal dan akhir lebih mudah diingat.', img: '/UXLab.svg', bg: '#4ECDC4', hasGame: true },
+    { key: 'similarity', title: 'Law of Similarity', desc: 'Elemen yang mirip dipersepsikan sebagai satu kelompok.', img: '/UXLab.svg', bg: '#9B59B6', hasGame: false },
+    { key: 'closure', title: 'Law of Closure', desc: 'Mata cenderung melengkapi bentuk yang tidak lengkap.', img: '/UXLab.svg', bg: '#E67E22', hasGame: false },
+    { key: 'continuity', title: 'Law of Continuity', desc: 'Mata mengikuti garis dan kurva yang halus.', img: '/UXLab.svg', bg: '#1ABC9C', hasGame: false },
   ]), []);
 
   const items = useMemo(() => Array.from({ length: 20 }, (_, i) => {
@@ -81,7 +473,7 @@ export default function LawsPage() {
   const [progressiveVersion, setProgressiveVersion] = useState('all');
   const [progressiveTask, setProgressiveTask] = useState(0);
   const [progressiveResults, setProgressiveResults] = useState({ all: null, progressive: null });
-  // Micro-interactions state
+  
   const [microVersion, setMicroVersion] = useState('basic');
   const [microAction, setMicroAction] = useState(0);
   const [microResults, setMicroResults] = useState({ basic: null, enhanced: null });
@@ -102,7 +494,7 @@ export default function LawsPage() {
   const [targetButton, setTargetButton] = useState(null);
   const [gamePhase, setGamePhase] = useState('waiting'); 
 
-  const gapX = 260; 
+  const gapX = 280; 
   const curvePow = 2.0; 
   const curveMul = 48; 
   const half = items.length / 2;
@@ -110,8 +502,8 @@ export default function LawsPage() {
   const handlePrev = () => setActive(prev => (prev - 1 + items.length) % items.length);
   const handleNext = () => setActive(prev => (prev + 1) % items.length);
 
+  // GAMEEEEE LETSGOOO
   const startGame = (mode) => {
-    // Hick's Law game
     setGameMode(mode);
     setGameType('hick');
     setGamePhase('ready');
@@ -317,7 +709,7 @@ export default function LawsPage() {
           @media (prefers-reduced-motion: reduce) {
             .card, .fade-slide-in, .title-in, .desc-in, .btn-in { animation: none !important; transition: none !important; }
           }
-          /* Responsive helpers */
+         
           .overlay-card { max-width: 600px; width: 90%; }
           .prox-grid { display: grid; grid-template-columns: repeat(8, 40px); gap: 16px; justify-content: center; }
           .prox-zones { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -380,6 +772,7 @@ export default function LawsPage() {
                   <button 
                     className="btn-in" 
                     onClick={() => {
+                      if (!items[active].hasGame) return;
                       const key = items[active].key;
                       if (key.includes('hick')) return startGame('easy');
                       if (key.includes('fitts') && !key.includes('edge')) return openFitts();
@@ -402,9 +795,21 @@ export default function LawsPage() {
                       if (key.includes('visibility-status')) return openVisibilityStatus('with');
                       if (key.includes('consistency')) return openConsistency('consistent');
                     }}
-                    style={{width:'207px', padding:'10px 24px', borderRadius:'14px', background:'#8eb940', color:'#000000', fontWeight:700, boxShadow:'4px 4px 20px rgba(255,255,255,0.10), inset 0 4px 24px rgba(232,244,98,1), inset 4px 0 24px rgba(232,244,98,1)', outline:'4px solid rgba(255,255,255,0.1)', cursor:'pointer', pointerEvents:'all'}}
+                    style={{
+                      width:'207px', 
+                      padding:'10px 24px', 
+                      borderRadius:'16px', 
+                      background: items[active].hasGame ? '#8eb940' : '#666666', 
+                      color: items[active].hasGame ? '#000000' : '#999999', 
+                      fontWeight:700, 
+                      boxShadow: items[active].hasGame ? '4px 4px 20px rgba(255,255,255,0.10), inset 0 4px 24px rgba(232,244,98,1), inset 4px 0 24px rgba(232,244,98,1)' : 'none', 
+                      outline:'4px solid rgba(255,255,255,0.1)', 
+                      cursor: items[active].hasGame ? 'pointer' : 'not-allowed', 
+                      pointerEvents:'all',
+                      opacity: items[active].hasGame ? 1 : 0.6
+                    }}
                   >
-                    Simulasi
+                    {items[active].hasGame ? 'Simulasi' : 'Coming Soon'}
                   </button>
               </div>
             </div>
@@ -588,11 +993,10 @@ export default function LawsPage() {
           </div>
         )}
 
-        {/* Fitts's Law Overlay */}
         {(gameType === 'fitts') && (
           <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.9)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:1000, color:'#fff' }}>
             <div style={{ position:'relative', width:'100%', height:'100%' }}>
-              {/* Near large target near center */}
+              
               {fittsResult.nearLarge == null && (
                 <>
                   <p style={{position:'absolute', top:20, width:'100%', textAlign:'center'}}>Klik lingkaran hijau besar sedekat ini secepat mungkin</p>
@@ -602,7 +1006,7 @@ export default function LawsPage() {
                   )}
                 </>
               )}
-              {/* Far small target at corner */}
+             
               {fittsResult.nearLarge != null && fittsResult.farSmall == null && (
                 <>
                   <p style={{position:'absolute', top:20, width:'100%', textAlign:'center'}}>Sekarang klik lingkaran hijau kecil di pojok kiri bawah</p>
@@ -638,7 +1042,7 @@ export default function LawsPage() {
           </div>
         )}
 
-        {/* Jakob's Law Overlay */}
+        {/* Jakob's Law */}
         {(gameType === 'jakob') && (
           <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.9)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:1000, color:'#fff' }}>
             <div style={{ background:'#1a1a1a', border:'1px solid #333', borderRadius:16, padding:24, width:520 }}>
@@ -947,7 +1351,7 @@ export default function LawsPage() {
           </div>
         )}
 
-        {/* Similarity Principle Overlay */}
+        {/* Similarity Principle */}
         {(gameType === 'similarity') && (
           <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.9)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:1000, color:'#fff' }}>
             <div className="overlay-card" style={{ background:'#1a1a1a', border:'1px solid #333', borderRadius:16, padding:24, width:600 }}>
@@ -974,11 +1378,9 @@ export default function LawsPage() {
             </div>
           </div>
         )}
-        <section style={{maxWidth:'56rem', marginLeft:'auto', marginRight:'auto', textAlign:'left'}}>
-          <h2 style={{fontSize:'28px', fontWeight:600, marginBottom:'12px'}}>Penjelasan Singkat</h2>
-          <p style={{opacity:.9, lineHeight:1.7, marginBottom:'12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at mauris non dolor laoreet sagittis. Aenean ut tristique justo. Maecenas vitae hendrerit massa. Sed faucibus, urna in congue convallis, arcu nisi viverra magna, a ultricies lorem elit sed sem.</p>
-          <p style={{opacity:.9, lineHeight:1.7, marginBottom:'12px'}}>Phasellus at ipsum vel ligula dictum luctus. Cras vulputate volutpat posuere. Duis at dictum lorem, quis volutpat velit. Sed in elit a nunc gravida malesuada in nec lacus. Donec at arcu sit amet felis commodo consequat.</p>
-          <p style={{opacity:.9, lineHeight:1.7}}>Suspendisse potenti. Integer sed velit urna. Integer vitae porttitor mi. Cras sit amet justo sed sapien scelerisque aliquet a in justo.</p>
+        {/* Detailed Explanation Section */}
+        <section style={{maxWidth:'56rem', marginLeft:'auto', marginRight:'auto', textAlign:'left', padding:'-20px 20px 40px 20px', marginTop:'-280px'}}>
+          <DetailedExplanation law={items[active]} />
         </section>
       </main>
     </>
