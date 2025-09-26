@@ -115,7 +115,7 @@ const HomePage = () => {
               className="text-2xl font-normal text-white text-center enter-stack-3" 
               style={{maxWidth:'550px', margin:'0 auto'}}
             >
-              UX Lab adalah media pembelajaran interaktif untuk memahami prinsip-prinsip UX Laws. Rasakan langsung bagaimana hukum psikologi memengaruhi pengalaman pengguna.
+              A space where you don’t just read theories, but truly experience how design psychology shapes every interaction.
             </p>
           </div>
         </div>
