@@ -10,25 +10,29 @@ const satoshi = localFont({
 export const metadata = {
   title: 'UXLab',
   description: 'Learn UX Laws by Doing',
+  icons: {
+    icon: '/iconUXLab.svg',
+  }
 };
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
+  const bodyStyles = {
+    backgroundImage: 'radial-gradient(80% 80% at 50% 50%, #1A1A1A 10%, #000000 100%)',
+    backgroundColor: '#000000',
+    minHeight: '100vh',
+    color: '#ffffff',
+    margin: 0,
+    padding: 0
+  };
+
   return (
     <html lang="en">
-      <body 
-        className={`${satoshi.className}`}
-        style={{
-          backgroundImage: 'radial-gradient(80% 80% at 50% 50%, #1A1A1A 10%, #000000 100%)',
-          backgroundColor: '#000000',
-          minHeight: '100vh',
-          color: '#ffffff',
-          margin: 0,
-          padding: 0
-        }}
-      >
+      <body className={satoshi.className} style={bodyStyles}>
         {children}
         <Footer />
       </body>
     </html>
   );
 }
+
+export default RootLayout;

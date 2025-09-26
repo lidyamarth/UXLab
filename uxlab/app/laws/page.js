@@ -296,8 +296,8 @@ function DetailedExplanation({ law }) {
               gap:'16px'
             }}>
               <div style={{
-                width: 32, 
-                height: 32,
+                width: 28, 
+                height: 28,
                 padding: 10, 
                 borderRadius: 18, 
                 outline: '1px white solid', 
@@ -312,7 +312,7 @@ function DetailedExplanation({ law }) {
                   alignSelf: 'stretch', 
                   textAlign: 'center', 
                   color: 'white', 
-                  fontSize: 20, 
+                  fontSize: 16, 
                   fontFamily: 'Satoshi', 
                   fontStyle: 'italic', 
                   fontWeight: '400', 
@@ -391,24 +391,34 @@ function DetailedExplanation({ law }) {
   );
 }
 
-export default function LawsPage() {
-  const baseItems = useMemo(() => ([
-    { key: 'hick', title: "Hick's Law", desc: 'Waktu untuk mengambil keputusan bertambah seiring banyaknya dan rumitnya pilihan.', img: '/hicks.webp', hasGame: true },
-    { key: 'fitts', title: "Fitts's Law", desc: 'Waktu untuk mencapai target dipengaruhi oleh ukuran dan jaraknya.', img: '/fitts.svg', bg: '#E74C3C', hasGame: true },
-    { key: 'jakob', title: "Jakob's Law", desc: 'User menyukai pola yang sudah familiar.', img: '/UXLab.svg', bg: '#2D9CDB', hasGame: true },
-    { key: 'miller', title: "Miller's Law", desc: 'Short-term memory rata-rata 7±2 item.', img: '/UXLab.svg', bg: '#56CCF2', hasGame: true },
-    { key: 'proximity', title: 'Law of Proximity', desc: 'Elemen yang berdekatan dipersepsikan memiliki keterkaitan.', img: '/window.svg', bg: '#F2C94C', hasGame: true },
-    { key: 'peak-end', title: 'Peak-End Rule', desc: 'Pengalaman dinilai dari puncak emosional dan akhir.', img: '/UXLab.svg', bg: '#FF6B6B', hasGame: true },
-    { key: 'serial-position', title: 'Serial Position Effect', desc: 'Item di awal dan akhir lebih mudah diingat.', img: '/UXLab.svg', bg: '#4ECDC4', hasGame: true },
-    { key: 'similarity', title: 'Law of Similarity', desc: 'Elemen yang mirip dipersepsikan sebagai satu kelompok.', img: '/UXLab.svg', bg: '#9B59B6', hasGame: false },
-    { key: 'closure', title: 'Law of Closure', desc: 'Mata cenderung melengkapi bentuk yang tidak lengkap.', img: '/UXLab.svg', bg: '#E67E22', hasGame: false },
-    { key: 'continuity', title: 'Law of Continuity', desc: 'Mata mengikuti garis dan kurva yang halus.', img: '/UXLab.svg', bg: '#1ABC9C', hasGame: false },
-  ]), []);
+function LawsPage() {
+  // console.log('Laws page rendered');
+  const baseItems = useMemo(() => {
+    return [
+      { key: 'hick', title: "Hick's Law", desc: 'Waktu untuk mengambil keputusan bertambah seiring banyaknya dan rumitnya pilihan.', img: '/hicks.webp', hasGame: true },
+      { key: 'fitts', title: "Fitts's Law", desc: 'Waktu untuk mencapai target dipengaruhi oleh ukuran dan jaraknya.', img: '/fitts.svg', hasGame: true },
+      { key: 'jakob', title: "Jakob's Law", desc: 'User menyukai pola yang sudah familiar.', img: '/jakob.svg', hasGame: true },
+      { key: 'miller', title: "Miller's Law", desc: 'Short-term memory rata-rata 7±2 item.', img: '/miller.svg', hasGame: true },
+      { key: 'proximity', title: 'Law of Proximity', desc: 'Elemen yang berdekatan dipersepsikan memiliki keterkaitan.', img: '/proximity.svg', hasGame: true },
+      { key: 'peak-end', title: 'Peak-End Rule', desc: 'Pengalaman dinilai dari puncak emosional dan akhir.', img: '/peakend.svg', hasGame: true },
+      { key: 'serial-position', title: 'Serial Position Effect', desc: 'Item di awal dan akhir lebih mudah diingat.', img: '/serial.svg', hasGame: true },
+      { key: 'similarity', title: 'Law of Similarity', desc: 'Elemen yang mirip dipersepsikan sebagai satu kelompok.', img: '/similarity.svg', hasGame: false },
+      { key: 'closure', title: 'Law of Closure', desc: 'Mata cenderung melengkapi bentuk yang tidak lengkap.', img: '/closure.svg', hasGame: false },
+      { key: 'continuity', title: 'Law of Continuity', desc: 'Mata mengikuti garis dan kurva yang halus.', img: '/continuity.svg', hasGame: false },
+    ];
+  }, []);
 
-  const items = useMemo(() => Array.from({ length: 20 }, (_, i) => {
-    const b = baseItems[i % baseItems.length];
-    return { ...b, key: `${b.key}-${i}` };
-  }), [baseItems]);
+  const items = useMemo(() => {
+    const result = [];
+    for (let i = 0; i < 20; i++) {
+      const baseItem = baseItems[i % baseItems.length];
+      result.push({
+        ...baseItem,
+        key: `${baseItem.key}-${i}`
+      });
+    }
+    return result;
+  }, [baseItems]);
 
   const [active, setActive] = useState(0);
   const [isPaused, setPaused] = useState(false);
@@ -499,8 +509,13 @@ export default function LawsPage() {
   const curveMul = 48; 
   const half = items.length / 2;
 
-  const handlePrev = () => setActive(prev => (prev - 1 + items.length) % items.length);
-  const handleNext = () => setActive(prev => (prev + 1) % items.length);
+  function handlePrev() {
+    setActive(prev => (prev - 1 + items.length) % items.length);
+  }
+  
+  const handleNext = () => {
+    setActive(prev => (prev + 1) % items.length);
+  };
 
   // GAMEEEEE LETSGOOO
   const startGame = (mode) => {
@@ -668,20 +683,6 @@ export default function LawsPage() {
     setGameStartTime(null);
     setTargetButton(null);
   };
-
-  useEffect(() => {
-    if (isPaused) return;
-    const id = setInterval(() => {
-      setActive(prev => (prev + 1) % items.length);
-    }, 3000);
-    return () => clearInterval(id);
-  }, [isPaused, items.length]);
-
-  useEffect(() => {
-    const onVisibility = () => setPaused(document.hidden);
-    document.addEventListener('visibilitychange', onVisibility);
-    return () => document.removeEventListener('visibilitychange', onVisibility);
-  }, []);
 
   return (
     <>
@@ -920,7 +921,7 @@ export default function LawsPage() {
                         }
                       </p>
                       <div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '12px', padding: '16px', marginTop: '20px' }}>
-                        <h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>💡 Lesson Learned:</h4>
+                        <h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>💡 Lesson Learned</h4>
                         <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}>
                           <strong>Hick's Law terbukti:</strong> Semakin banyak pilihan, semakin lama waktu pengambilan keputusan. 
                           Dalam desain UI, batasi opsi menu, gunakan progressive disclosure, dan kelompokkan pilihan yang mirip untuk mengurangi cognitive load.
@@ -1386,3 +1387,5 @@ export default function LawsPage() {
     </>
   );
 }
+
+export default LawsPage;
