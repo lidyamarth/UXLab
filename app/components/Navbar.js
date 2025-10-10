@@ -43,6 +43,16 @@ function Navbar() {
           padding: '0 20px'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '120px' }}>
+            <Link href="/" style={{display:'inline-flex', alignItems:'center', justifyContent:'center'}}>
+              <img
+                src="/UXLab.webp"
+                alt="UXLab Logo"
+                height={36}
+                style={{width:'auto', display:'block'}}
+                draggable={false}
+              />
+            </Link>      
+
             <Link 
               href="/" 
               style={{
@@ -54,16 +64,6 @@ function Navbar() {
               }}
             >
               Home
-            </Link>
-            
-            <Link href="/" style={{display:'inline-flex', alignItems:'center', justifyContent:'center'}}>
-              <img
-                src="/UXLab.webp"
-                alt="UXLab Logo"
-                height={36}
-                style={{width:'auto', display:'block'}}
-                draggable={false}
-              />
             </Link>
             
             <Link 
@@ -80,10 +80,12 @@ function Navbar() {
             </Link>
           </div>
 
-          {/* Auth Section */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             {currentUser ? (
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ fontSize: '14px', color: '#8eb940' }}>
+                  {currentUser.email}
+                </span>                
                 <button
                   onClick={() => setShowDashboard(true)}
                   style={{
@@ -98,9 +100,6 @@ function Navbar() {
                 >
                   Dashboard
                 </button>
-                <span style={{ fontSize: '14px', color: '#8eb940' }}>
-                  {currentUser.email}
-                </span>
                 <button
                   onClick={handleLogout}
                   style={{
