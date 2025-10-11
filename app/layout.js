@@ -1,6 +1,6 @@
 import localFont from 'next/font/local';
 import Footer from './components/Footer';
-import ClientAuthProvider from './components/ClientAuthProvider';
+import { ClientAuthProvider } from './components/ClientAuthProvider';
 
 const satoshi = localFont({
   src: './fonts/Satoshi-Variable.ttf',
@@ -31,8 +31,8 @@ function RootLayout({ children }) {
       <body className={satoshi.className} style={bodyStyles}>
         <ClientAuthProvider>
           {children}
-          <Footer />
         </ClientAuthProvider>
+        <Footer />
       </body>
     </html>
   );

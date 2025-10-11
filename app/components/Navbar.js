@@ -10,7 +10,7 @@ function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === '/';
   const isLaws = pathname === '/laws';
-  const { currentUser, logout } = useAuth();
+  const { user, logout } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
   const headerStyles = {
@@ -65,26 +65,28 @@ function Navbar() {
             >
               Home
             </Link>
-            
-            <Link 
-              href="/laws" 
-              style={{
-                color:'#ffffff', 
-                textDecoration:'none', 
-                fontSize:'16px', 
-                fontWeight: isLaws ? 500 : 400, 
-                fontStyle: isLaws ? 'italic' : 'normal'
-              }}
-            >
-              Laws
-            </Link>
+              
+            {user && (
+              <Link
+                href="/laws"
+                style={{
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '16px',
+                  fontWeight: isLaws ? 500 : 400,
+                  fontStyle: isLaws ? 'italic' : 'normal'
+                }}
+              >
+                Laws
+              </Link>
+            )}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            {currentUser ? (
+            {user ? (
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <span style={{ fontSize: '14px', color: '#8eb940' }}>
-                  {currentUser.email}
+                  {user.email}
                 </span>                
                 <button
                   onClick={() => setShowDashboard(true)}
