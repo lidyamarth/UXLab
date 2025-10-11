@@ -127,10 +127,11 @@ function Navbar() {
           ) : (
             <button
               onClick={() => setShowAuthModal(true)}
-              style={{
-                padding: '8px 16px', borderRadius: '8px', backgroundColor: '#8eb940',
-                color: '#000', border: 'none', fontSize: '15px',
-                fontWeight: 'bold', cursor: 'pointer'
+                style={{
+                  padding: '5px 12px', borderRadius: '12px', backgroundColor: '#8eb940',
+                  boxShadow: '4px 4px 20px rgba(255,255,255,0.10), inset 0 4px 24px rgba(232,244,98,1), inset 4px 0 24px rgba(232,244,98,1)',
+                  color: '#000000', border: '2.5px solid #555', fontSize: '15px',
+                  cursor: 'pointer'
               }}
             >
               Login
