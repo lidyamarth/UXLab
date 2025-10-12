@@ -15,81 +15,211 @@ const lawContent = {
     title: "Hick's Law",
     shortDescription: "Waktu untuk mengambil keputusan bertambah seiring banyaknya dan rumitnya pilihan.",
     detailedDescription: "Hick's Law menyatakan bahwa waktu yang dibutuhkan untuk membuat keputusan meningkat secara logaritmik dengan jumlah pilihan yang tersedia. Semakin banyak opsi yang diberikan kepada user, semakin lama waktu yang dibutuhkan untuk memilih.",
-    keyTakeaways: ["Batasi jumlah pilihan dalam menu utama (maksimal 7 item)","Gunakan progressive disclosure untuk menyembunyikan opsi lanjutan","Kelompokkan pilihan yang mirip untuk mengurangi cognitive load","Prioritaskan opsi yang paling sering digunakan"],
-    images: [{ src: "/hicks.webp", alt: "Contoh menu dengan banyak pilihan", description: "Menu dengan terlalu banyak pilihan dapat membingungkan user dan memperlambat pengambilan keputusan" }],
-    examples: ["Menu restoran dengan 50+ item vs menu dengan kategori yang jelas","Form pendaftaran dengan 20 field vs form bertahap","Dashboard dengan 15 widget vs dashboard yang terorganisir"]
+    keyTakeaways: [
+      "Batasi jumlah pilihan dalam menu utama (maksimal 7 item)",
+      "Gunakan progressive disclosure untuk menyembunyikan opsi lanjutan",
+      "Kelompokkan pilihan yang mirip untuk mengurangi cognitive load",
+      "Prioritaskan opsi yang paling sering digunakan"
+    ],
+    images: [{
+      src: "/hicks.webp",
+      alt: "Contoh menu dengan banyak pilihan",
+      description: "Menu dengan terlalu banyak pilihan dapat membingungkan user dan memperlambat pengambilan keputusan"
+    }],
+    examples: [
+      "Menu restoran dengan 50+ item vs menu dengan kategori yang jelas",
+      "Form pendaftaran dengan 20 field vs form bertahap",
+      "Dashboard dengan 15 widget vs dashboard yang terorganisir"
+    ]
   },
   'fitts': {
     title: "Fitts's Law",
     shortDescription: "Waktu untuk mencapai target dipengaruhi oleh ukuran dan jaraknya.",
     detailedDescription: "Fitts's Law menjelaskan bahwa waktu yang dibutuhkan untuk bergerak ke target adalah fungsi dari jarak ke target dan ukuran target. Target yang lebih besar dan lebih dekat lebih mudah dicapai.",
-    keyTakeaways: ["Buat tombol penting cukup besar untuk mudah diklik","Letakkan elemen penting di area yang mudah dijangkau","Manfaatkan edge screen untuk target yang sering digunakan","Pertimbangkan ukuran jari untuk desain mobile"],
-    images: [{ src: "/fitts.svg", alt: "Ilustrasi Fitts's Law", description: "Target besar dan dekat lebih mudah dicapai daripada target kecil dan jauh" }],
-    examples: ["Tombol 'Submit' yang besar vs tombol kecil","Menu hamburger di pojok kiri atas (edge screen)","Tombol back di iOS yang memanfaatkan edge screen"]
+    keyTakeaways: [
+      "Buat tombol penting cukup besar untuk mudah diklik",
+      "Letakkan elemen penting di area yang mudah dijangkau",
+      "Manfaatkan edge screen untuk target yang sering digunakan",
+      "Pertimbangkan ukuran jari untuk desain mobile"
+    ],
+    images: [{
+      src: "/fitts.svg",
+      alt: "Ilustrasi Fitts's Law",
+      description: "Target besar dan dekat lebih mudah dicapai daripada target kecil dan jauh"
+    }],
+    examples: [
+      "Tombol 'Submit' yang besar vs tombol kecil",
+      "Menu hamburger di pojok kiri atas (edge screen)",
+      "Tombol back di iOS yang memanfaatkan edge screen"
+    ]
   },
   'jakob': {
     title: "Jakob's Law",
     shortDescription: "User menyukai pola yang sudah familiar.",
     detailedDescription: "Jakob's Law menyatakan bahwa user menghabiskan sebagian besar waktu mereka di website lain. Oleh karena itu, mereka lebih menyukai interface yang mengikuti pola yang sudah familiar dan diharapkan.",
-    keyTakeaways: ["Gunakan ikon standar yang sudah dikenal user","Letakkan elemen di posisi yang diharapkan","Ikuti konvensi platform (iOS vs Android)","Hindari desain yang terlalu kreatif untuk fungsi dasar"],
-    images: [{ src: "/UXLab.svg", alt: "Contoh ikon familiar", description: "Ikon standar seperti home, profile, dan settings lebih mudah dikenali user" }],
-    examples: ["Ikon rumah untuk home, ikon gear untuk settings","Logo di kiri atas, menu di kanan atas","Tombol back di kiri atas untuk mobile"]
+    keyTakeaways: [
+      "Gunakan ikon standar yang sudah dikenal user",
+      "Letakkan elemen di posisi yang diharapkan",
+      "Ikuti konvensi platform (iOS vs Android)",
+      "Hindari desain yang terlalu kreatif untuk fungsi dasar"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Contoh ikon familiar",
+      description: "Ikon standar seperti home, profile, dan settings lebih mudah dikenali user"
+    }],
+    examples: [
+      "Ikon rumah untuk home, ikon gear untuk settings",
+      "Logo di kiri atas, menu di kanan atas",
+      "Tombol back di kiri atas untuk mobile"
+    ]
   },
   'miller': {
     title: "Miller's Law",
     shortDescription: "Short-term memory rata-rata 7±2 item.",
     detailedDescription: "Miller's Law didasarkan pada penelitian yang menunjukkan bahwa kapasitas short-term memory manusia terbatas pada 7±2 item. Ini berarti kita hanya bisa mengingat sekitar 5-9 item dalam waktu singkat.",
-    keyTakeaways: ["Batasi menu utama maksimal 7 item","Gunakan chunking untuk mengelompokkan informasi","Berikan feedback visual untuk membantu mengingat","Hindari overload informasi dalam satu layar"],
-    images: [{ src: "/UXLab.svg", alt: "Contoh chunking informasi", description: "Mengelompokkan informasi dalam chunk yang mudah diingat" }],
-    examples: ["Nomor telepon: 0812-3456-7890 (chunked) vs 081234567890","Menu dengan 5 kategori vs menu dengan 15 item","Form dengan section yang jelas vs form panjang"]
+    keyTakeaways: [
+      "Batasi menu utama maksimal 7 item",
+      "Gunakan chunking untuk mengelompokkan informasi",
+      "Berikan feedback visual untuk membantu mengingat",
+      "Hindari overload informasi dalam satu layar"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Contoh chunking informasi",
+      description: "Mengelompokkan informasi dalam chunk yang mudah diingat"
+    }],
+    examples: [
+      "Nomor telepon: 0812-3456-7890 (chunked) vs 081234567890",
+      "Menu dengan 5 kategori vs menu dengan 15 item",
+      "Form dengan section yang jelas vs form panjang"
+    ]
   },
   'proximity': {
     title: "Law of Proximity",
     shortDescription: "Elemen yang berdekatan dipersepsikan memiliki keterkaitan.",
     detailedDescription: "Law of Proximity menyatakan bahwa elemen visual yang berdekatan dipersepsikan sebagai satu kelompok atau memiliki hubungan. Ini adalah prinsip dasar dalam desain visual dan UX.",
-    keyTakeaways: ["Gunakan whitespace untuk memisahkan kelompok yang berbeda","Letakkan elemen terkait berdekatan","Gunakan visual grouping untuk meningkatkan scanability","Pertimbangkan jarak dalam grid layout"],
-    images: [{ src: "/window.svg", alt: "Contoh grouping dengan proximity", description: "Elemen yang berdekatan terlihat sebagai satu kelompok" }],
-    examples: ["Form dengan label dekat input field","Card design dengan elemen terkait berdekatan","Navigation menu dengan item terkait dalam grup"]
+    keyTakeaways: [
+      "Gunakan whitespace untuk memisahkan kelompok yang berbeda",
+      "Letakkan elemen terkait berdekatan",
+      "Gunakan visual grouping untuk meningkatkan scanability",
+      "Pertimbangkan jarak dalam grid layout"
+    ],
+    images: [{
+      src: "/window.svg",
+      alt: "Contoh grouping dengan proximity",
+      description: "Elemen yang berdekatan terlihat sebagai satu kelompok"
+    }],
+    examples: [
+      "Form dengan label dekat input field",
+      "Card design dengan elemen terkait berdekatan",
+      "Navigation menu dengan item terkait dalam grup"
+    ]
   },
   'peak-end': {
     title: "Peak-End Rule",
     shortDescription: "Pengalaman dinilai dari puncak emosional dan akhir.",
     detailedDescription: "Peak-End Rule menyatakan bahwa pengalaman dinilai berdasarkan puncak emosional (baik positif maupun negatif) dan bagaimana pengalaman berakhir, bukan rata-rata keseluruhan pengalaman.",
-    keyTakeaways: ["Pastikan akhir pengalaman selalu positif","Ciptakan momen yang memorable","Minimalkan friction di tengah proses","Berikan feedback yang jelas di setiap langkah"],
-    images: [{ src: "/UXLab.svg", alt: "Grafik Peak-End Rule", description: "Pengalaman dinilai dari puncak dan akhir, bukan rata-rata" }],
-    examples: ["Checkout process dengan konfirmasi yang menyenangkan","Onboarding dengan welcome message yang hangat","Error handling yang helpful dan tidak menyalahkan user"]
+    keyTakeaways: [
+      "Pastikan akhir pengalaman selalu positif",
+      "Ciptakan momen yang memorable",
+      "Minimalkan friction di tengah proses",
+      "Berikan feedback yang jelas di setiap langkah"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Grafik Peak-End Rule",
+      description: "Pengalaman dinilai dari puncak dan akhir, bukan rata-rata"
+    }],
+    examples: [
+      "Checkout process dengan konfirmasi yang menyenangkan",
+      "Onboarding dengan welcome message yang hangat",
+      "Error handling yang helpful dan tidak menyalahkan user"
+    ]
   },
   'serial-position': {
     title: "Serial Position Effect",
     shortDescription: "Item di awal dan akhir lebih mudah diingat.",
     detailedDescription: "Serial Position Effect menjelaskan bahwa item di posisi awal (primacy effect) dan akhir (recency effect) dalam sebuah daftar lebih mudah diingat daripada item di tengah.",
-    keyTakeaways: ["Letakkan informasi penting di awal dan akhir list","Gunakan breadcrumb untuk navigasi","Highlight item terakhir yang diakses","Pertimbangkan urutan dalam menu dan form"],
-    images: [{ src: "/UXLab.svg", alt: "Contoh serial position effect", description: "Item pertama dan terakhir lebih mudah diingat" }],
-    examples: ["Menu dengan item penting di awal dan akhir","Form dengan field penting di awal","Search results dengan item relevan di posisi awal"]
+    keyTakeaways: [
+      "Letakkan informasi penting di awal dan akhir list",
+      "Gunakan breadcrumb untuk navigasi",
+      "Highlight item terakhir yang diakses",
+      "Pertimbangkan urutan dalam menu dan form"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Contoh serial position effect",
+      description: "Item pertama dan terakhir lebih mudah diingat"
+    }],
+    examples: [
+      "Menu dengan item penting di awal dan akhir",
+      "Form dengan field penting di awal",
+      "Search results dengan item relevan di posisi awal"
+    ]
   },
   'similarity': {
     title: "Law of Similarity",
     shortDescription: "Elemen yang mirip dipersepsikan sebagai satu kelompok.",
     detailedDescription: "Law of Similarity menyatakan bahwa elemen visual yang memiliki karakteristik yang sama (warna, bentuk, ukuran, orientasi) akan dipersepsikan sebagai satu kelompok atau memiliki hubungan.",
-    keyTakeaways: ["Gunakan warna konsisten untuk elemen yang terkait","Buat tombol dengan style yang sama untuk fungsi serupa","Gunakan typography yang konsisten untuk hierarki","Kelompokkan elemen dengan bentuk atau ukuran yang mirip"],
-    images: [{ src: "/UXLab.svg", alt: "Contoh law of similarity", description: "Elemen dengan warna dan bentuk yang sama terlihat sebagai satu kelompok" }],
-    examples: ["Tombol dengan warna yang sama untuk fungsi serupa","Card design dengan style yang konsisten","Navigation menu dengan ikon yang seragam"]
+    keyTakeaways: [
+      "Gunakan warna konsisten untuk elemen yang terkait",
+      "Buat tombol dengan style yang sama untuk fungsi serupa",
+      "Gunakan typography yang konsisten untuk hierarki",
+      "Kelompokkan elemen dengan bentuk atau ukuran yang mirip"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Contoh law of similarity",
+      description: "Elemen dengan warna dan bentuk yang sama terlihat sebagai satu kelompok"
+    }],
+    examples: [
+      "Tombol dengan warna yang sama untuk fungsi serupa",
+      "Card design dengan style yang konsisten",
+      "Navigation menu dengan ikon yang seragam"
+    ]
   },
   'closure': {
     title: "Law of Closure",
     shortDescription: "Mata cenderung melengkapi bentuk yang tidak lengkap.",
     detailedDescription: "Law of Closure menjelaskan bahwa otak manusia cenderung melengkapi bentuk atau pola yang tidak lengkap untuk menciptakan gambaran yang utuh dan bermakna.",
-    keyTakeaways: ["Gunakan bentuk yang tidak lengkap untuk menarik perhatian","Manfaatkan whitespace untuk menciptakan ilusi bentuk","Gunakan loading states yang menunjukkan progress","Buat desain yang memungkinkan user melengkapi pola"],
-    images: [{ src: "/UXLab.svg", alt: "Contoh law of closure", description: "Bentuk yang tidak lengkap membuat user ingin melengkapinya" }],
-    examples: ["Loading spinner yang menunjukkan progress","Card design dengan border yang tidak lengkap","Icon yang menggunakan negative space"]
+    keyTakeaways: [
+      "Gunakan bentuk yang tidak lengkap untuk menarik perhatian",
+      "Manfaatkan whitespace untuk menciptakan ilusi bentuk",
+      "Gunakan loading states yang menunjukkan progress",
+      "Buat desain yang memungkinkan user melengkapi pola"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Contoh law of closure",
+      description: "Bentuk yang tidak lengkap membuat user ingin melengkapinya"
+    }],
+    examples: [
+      "Loading spinner yang menunjukkan progress",
+      "Card design dengan border yang tidak lengkap",
+      "Icon yang menggunakan negative space"
+    ]
   },
   'continuity': {
     title: "Law of Continuity",
     shortDescription: "Mata mengikuti garis dan kurva yang halus.",
     detailedDescription: "Law of Continuity menyatakan bahwa mata manusia cenderung mengikuti garis dan kurva yang halus, dan mempersepsikan elemen yang berada dalam garis yang sama sebagai satu kelompok.",
-    keyTakeaways: ["Gunakan garis untuk memandu mata user","Buat flow yang natural dalam layout","Gunakan alignment yang konsisten","Manfaatkan kurva untuk menciptakan flow yang halus"],
-    images: [{ src: "/UXLab.svg", alt: "Contoh law of continuity", description: "Garis dan kurva memandu mata user mengikuti alur yang diinginkan" }],
-    examples: ["Timeline dengan garis yang menghubungkan event","Form dengan flow yang natural dari atas ke bawah","Carousel dengan indikator yang menunjukkan progress"]
+    keyTakeaways: [
+      "Gunakan garis untuk memandu mata user",
+      "Buat flow yang natural dalam layout",
+      "Gunakan alignment yang konsisten",
+      "Manfaatkan kurva untuk menciptakan flow yang halus"
+    ],
+    images: [{
+      src: "/UXLab.svg",
+      alt: "Contoh law of continuity",
+      description: "Garis dan kurva memandu mata user mengikuti alur yang diinginkan"
+    }],
+    examples: [
+      "Timeline dengan garis yang menghubungkan event",
+      "Form dengan flow yang natural dari atas ke bawah",
+      "Carousel dengan indikator yang menunjukkan progress"
+    ]
   }
 };
 
@@ -104,13 +234,11 @@ function DetailedExplanation({ law }) {
       "Key takeaway 2 akan ditambahkan",
       "Key takeaway 3 akan ditambahkan"
     ],
-    images: [
-      {
-        src: law.img,
-        alt: "Ilustrasi " + law.title,
-        description: "Deskripsi gambar akan ditambahkan"
-      }
-    ],
+    images: [{
+      src: law.img,
+      alt: "Ilustrasi " + law.title,
+      description: "Deskripsi gambar akan ditambahkan"
+    }],
     examples: [
       "Contoh aplikasi 1",
       "Contoh aplikasi 2",
@@ -135,16 +263,31 @@ function DetailedExplanation({ law }) {
       </h2>
 
       <div style={{ marginBottom: '30px' }}>
-        <p style={{ opacity: 0.9, lineHeight: 1.7, fontSize: '20px', fontWeight: 400, marginBottom: '16px' }}>
+        <p style={{
+          opacity: 0.9,
+          lineHeight: 1.7,
+          fontSize: '20px',
+          fontWeight: 400,
+          marginBottom: '16px'
+        }}>
           {content.detailedDescription}
         </p>
       </div>
 
       <div style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '16px', color: '#ffffff' }}>
+        <h3 style={{
+          fontSize: '24px',
+          fontWeight: 600,
+          marginBottom: '16px',
+          color: '#ffffff'
+        }}>
           Key Takeaways
         </h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px'
+        }}>
           {content.keyTakeaways.map((takeaway, index) => (
             <div key={index} style={{
               display: 'flex',
@@ -152,22 +295,45 @@ function DetailedExplanation({ law }) {
               gap: '16px'
             }}>
               <div style={{
-                width: 28, height: 28, padding: 10, borderRadius: 18,
-                outline: '1px white solid', outlineOffset: '-1px',
-                flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
-                display: 'inline-flex', flexShrink: 0
+                width: 28,
+                height: 28,
+                padding: 10,
+                borderRadius: 18,
+                outline: '1px white solid',
+                outlineOffset: '-1px',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                display: 'inline-flex',
+                flexShrink: 0
               }}>
                 <div style={{
-                  alignSelf: 'stretch', textAlign: 'center', color: 'white', fontSize: 16,
-                  fontFamily: 'Satoshi', fontStyle: 'italic', fontWeight: '400', wordWrap: 'break-word'
+                  alignSelf: 'stretch',
+                  textAlign: 'center',
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Satoshi',
+                  fontStyle: 'italic',
+                  fontWeight: '400',
+                  wordWrap: 'break-word'
                 }}>
                   {index + 1}.
                 </div>
               </div>
               <div style={{
-                flex: 1, padding: '12px 0', display: 'flex', alignItems: 'center'
+                flex: 1,
+                padding: '12px 0',
+                display: 'flex',
+                alignItems: 'center'
               }}>
-                <span style={{ opacity: 0.9, lineHeight: 1.6, fontSize: '20px', color: 'white' }}>{takeaway}</span>
+                <span style={{
+                  opacity: 0.9,
+                  lineHeight: 1.6,
+                  fontSize: '20px',
+                  color: 'white'
+                }}>
+                  {takeaway}
+                </span>
               </div>
             </div>
           ))}
@@ -175,14 +341,21 @@ function DetailedExplanation({ law }) {
       </div>
 
       <div style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '22px', fontWeight: 600, marginBottom: '16px', color: '#ffffff' }}>
+        <h3 style={{
+          fontSize: '22px',
+          fontWeight: 600,
+          marginBottom: '16px',
+          color: '#ffffff'
+        }}>
           Contoh Aplikasi
         </h3>
         <div style={{ display: 'grid', gap: '16px' }}>
           {content.examples.map((example, index) => (
             <div key={index} style={{
-              padding: '16px', background: 'rgba(255, 255, 255, 0.05)',
-              borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)'
+              padding: '16px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '12px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <span style={{ opacity: 0.9, lineHeight: 1.6 }}>{example}</span>
             </div>
@@ -191,20 +364,34 @@ function DetailedExplanation({ law }) {
       </div>
 
       <div style={{ marginBottom: '30px' }}>
-        <h3 style={{ fontSize: '22px', fontWeight: 600, marginBottom: '16px', color: '#ffffff' }}>
+        <h3 style={{
+          fontSize: '22px',
+          fontWeight: 600,
+          marginBottom: '16px',
+          color: '#ffffff'
+        }}>
           Ilustrasi
         </h3>
         <div style={{ display: 'grid', gap: '20px' }}>
           {content.images.map((image, index) => (
             <div key={index} style={{
-              textAlign: 'center', padding: '20px', background: 'rgba(255, 255, 255, 0.05)',
-              borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)'
+              textAlign: 'center',
+              padding: '20px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '12px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <img src={image.src} alt={image.alt} style={{
-                maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '12px'
+                maxWidth: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+                marginBottom: '12px'
               }} />
               <p style={{
-                opacity: 0.8, fontSize: '14px', lineHeight: 1.5, fontStyle: 'italic'
+                opacity: 0.8,
+                fontSize: '14px',
+                lineHeight: 1.5,
+                fontStyle: 'italic'
               }}>
                 {image.description}
               </p>
@@ -516,8 +703,47 @@ function LawsPage() {
     <>
       <Navbar />
       <main className="relative min-h-screen w-full" style={{ color: '#ffffff', padding: 0, overflow: 'hidden' }}>
-        <style>{`.laws-frame{position:relative;width:100vw;height:1024px;margin:0;overflow:hidden;padding:0}.carousel-stage{position:absolute;left:0;top:120px;transform:none;width:100vw;height:650px;pointer-events:none}.card{position:absolute;width:200px;height:200px;border-radius:28px;overflow:hidden;will-change:transform,opacity,filter}.card img,.card svg{width:100%;height:100%;object-fit:cover;display:block}.card-inner{width:100%;height:100%;display:grid;place-items:center}.card.active{box-shadow:0 0 30px rgba(255,255,255,0.35),0 6px 50px rgba(255,255,255,0.18)}.card:not(.active){opacity:.95}.nav-btn{pointer-events:all;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:66px;outline:1px solid #999;background:transparent;color:#fff}.nav-btn:hover{opacity:.9}.fade-slide-in{animation:fadeSlideIn 700ms cubic-bezier(0.16,1,0.3,1) both}@keyframes fadeSlideIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.title-in{animation:titleIn 700ms cubic-bezier(0.16,1,0.3,1) both}@keyframes titleIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.desc-in{animation:descIn 850ms cubic-bezier(0.16,1,0.3,1) both}@keyframes descIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}.btn-in{animation:btnIn 950ms cubic-bezier(0.16,1,0.3,1) both}@keyframes btnIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}.card{transition:transform 700ms cubic-bezier(0.16,1,0.3,1),opacity 400ms ease,filter 400ms ease}@media (prefers-reduced-motion:reduce){.card,.fade-slide-in,.title-in,.desc-in,.btn-in{animation:none!important;transition:none!important}}.overlay-card{max-width:600px;width:90%}.prox-grid{display:grid;grid-template-columns:repeat(8,40px);gap:16px;justify-content:center}.prox-zones{display:grid;grid-template-columns:1fr 1fr;gap:16px}.serial-words{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.rating-row{display:flex;gap:8px;justify-content:center;margin-bottom:16px}@media (max-width:1024px){.card{width:200px;height:200px}}@media (max-width:768px){.carousel-stage{top:180px;height:520px}.card{width:160px;height:160px;border-radius:24px}.overlay-card{width:92%!important;padding:16px!important}.prox-grid{grid-template-columns:repeat(4,40px)!important;gap:12px!important}.prox-zones{grid-template-columns:1fr!important}.serial-words{grid-template-columns:repeat(2,1fr)!important}}@media (max-width:420px){.card{width:130px;height:130px;border-radius:18px}}`}</style>
-        <div className="laws-frame" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+        <style>{`
+          .laws-frame { position: relative; width: 100vw; height: 1024px; margin: 0; overflow: hidden; padding: 0; }
+          .carousel-stage { position: absolute; left: 0; top: 120px; transform: none; width: 100vw; height: 650px; pointer-events: none; }
+          .card { position: absolute; width: 200px; height: 200px; border-radius: 28px; overflow: hidden; will-change: transform, opacity, filter; }
+          .card img, .card svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+          .card-inner { width: 100%; height: 100%; display: grid; place-items: center; }
+          .card.active { box-shadow: 0 0 30px rgba(255,255,255,0.35), 0 6px 50px rgba(255,255,255,0.18); }
+          .card:not(.active) { opacity: .95; }
+          .nav-btn { pointer-events: all; cursor: pointer; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 66px; outline: 1px solid #999; background: transparent; color: #fff; }
+          .nav-btn:hover { opacity: .9; }
+          .fade-slide-in { animation: fadeSlideIn 700ms cubic-bezier(0.16,1,0.3,1) both; }
+          @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+          .title-in { animation: titleIn 700ms cubic-bezier(0.16,1,0.3,1) both; }
+          @keyframes titleIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+          .desc-in { animation: descIn 850ms cubic-bezier(0.16,1,0.3,1) both; }
+          @keyframes descIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+          .btn-in { animation: btnIn 950ms cubic-bezier(0.16,1,0.3,1) both; }
+          @keyframes btnIn { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+          .card { transition: transform 700ms cubic-bezier(0.16,1,0.3,1), opacity 400ms ease, filter 400ms ease; }
+          @media (prefers-reduced-motion: reduce) { .card, .fade-slide-in, .title-in, .desc-in, .btn-in { animation: none !important; transition: none !important; } }
+          .overlay-card { max-width: 600px; width: 90%; }
+          .prox-grid { display: grid; grid-template-columns: repeat(8, 40px); gap: 16px; justify-content: center; }
+          .prox-zones { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+          .serial-words { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+          .rating-row { display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; }
+          @media (max-width: 1024px) { .card { width: 200px; height: 200px; } }
+          @media (max-width: 768px) {
+            .carousel-stage { top: 180px; height: 520px; }
+            .card { width: 160px; height: 160px; border-radius: 24px; }
+            .overlay-card { width: 92% !important; padding: 16px !important; }
+            .prox-grid { grid-template-columns: repeat(4, 40px) !important; gap: 12px !important; }
+            .prox-zones { grid-template-columns: 1fr !important; }
+            .serial-words { grid-template-columns: repeat(2, 1fr) !important; }
+          }
+          @media (max-width: 420px) { .card { width: 130px; height: 130px; border-radius: 18px; } }
+        `}</style>
+        <div
+          className="laws-frame"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           <div className="carousel-stage">
             {items.map((item, idx) => {
               let offset = idx - active;
@@ -528,101 +754,828 @@ function LawsPage() {
               const isActive = idx === active;
               const tilt = offset * 18;
               return (
-                <div key={item.key} className={`card ${isActive ? 'active' : ''}`} style={{
-                  left: '50%', top: '0',
-                  transform: `translate(-50%, 0) translate(${cx}px, ${cy}px) rotate(${tilt}deg) ${isActive ? 'scale(1.06)' : 'scale(1)'}`,
-                  background: item.bg, zIndex: isActive ? 20 : 20 - Math.abs(offset),
-                }}>
+                <div
+                  key={item.key}
+                  className={`card ${isActive ? 'active' : ''}`}
+                  style={{
+                    left: '50%',
+                    top: '0',
+                    transform: `translate(-50%, 0) translate(${cx}px, ${cy}px) rotate(${tilt}deg) ${isActive ? 'scale(1.06)' : 'scale(1)'}`,
+                    background: item.bg,
+                    zIndex: isActive ? 20 : 20 - Math.abs(offset),
+                  }}
+                >
                   <div className="card-inner">
                     <img src={item.img} alt={item.title} draggable={false} />
                   </div>
                 </div>
               );
             })}
-            <div style={{ position: 'absolute', left: '50%', top: '320px', transform: 'translateX(-50%)', width: 'min(100%, 980px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '28px', pointerEvents: 'none' }}>
-              <button onClick={handlePrev} aria-label="Previous" className="nav-btn" style={{ pointerEvents: 'all' }}>‹</button>
+            <div style={{
+              position: 'absolute',
+              left: '50%',
+              top: '320px',
+              transform: 'translateX(-50%)',
+              width: 'min(100%, 980px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '28px',
+              pointerEvents: 'none'
+            }}>
+              <button
+                onClick={handlePrev}
+                aria-label="Previous"
+                className="nav-btn"
+                style={{ pointerEvents: 'all' }}
+              >
+                ‹
+              </button>
               <div style={{ width: '450px' }} className="fade-slide-in">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                  {items.length > 0 && items[active] && <>
-                    <h1 className="title-in" style={{ fontSize: '32px', fontWeight: 500, marginBottom: '-8px' }}>{items[active].title}</h1>
-                    <p className="desc-in" style={{ fontSize: '18px', marginBottom: '44px', color: '#808080' }}>{items[active].desc}</p>
-                    <button
-                      className="btn-in"
-                      onClick={() => {
-                        if (!items[active].hasGame) return;
-                        const key = items[active].key;
-                        if (key.includes('hick')) return startGame('easy');
-                        if (key.includes('fitts') && !key.includes('edge')) return openFitts();
-                        if (key.includes('jakob')) return openJakob();
-                        if (key.includes('miller')) return openMiller(5);
-                        if (key.includes('proximity')) return openProximity('tight');
-                        if (key.includes('peak-end') && !key.includes('micro')) return openPeakEnd('A');
-                        if (key.includes('serial-position')) return openSerialPosition();
-                        if (key.includes('similarity')) return openSimilarity();
-                        if (key.includes('aesthetic-usability')) return openAestheticUsability('basic');
-                        if (key.includes('doherty')) return openDoherty(100);
-                        if (key.includes('prägnanz')) return openPragnanz('complex');
-                        if (key.includes('occam')) return openOccam('long');
-                        if (key.includes('click-cost')) return openClickCost('multi');
-                        if (key.includes('common-region')) return openCommonRegion();
-                        if (key.includes('fitts-edge')) return openFittsEdge();
-                        if (key.includes('progressive-disclosure')) return openProgressiveDisclosure('all');
-                        if (key.includes('micro-interactions')) return openMicroInteractions('basic');
-                        if (key.includes('navigation-primacy')) return openNavigationPrimacy('first');
-                        if (key.includes('visibility-status')) return openVisibilityStatus('with');
-                        if (key.includes('consistency')) return openConsistency('consistent');
-                      }}
-                      style={{
-                        width: '207px', padding: '10px 24px', borderRadius: '16px',
-                        background: items[active].hasGame ? '#8eb940' : '#666666',
-                        color: items[active].hasGame ? '#000000' : '#999999',
-                        fontWeight: 700,
-                        boxShadow: items[active].hasGame ? '4px 4px 20px rgba(255,255,255,0.10), inset 0 4px 24px rgba(232,244,98,1), inset 4px 0 24px rgba(232,244,98,1)' : 'none',
-                        outline: '4px solid rgba(255,255,255,0.1)',
-                        cursor: items[active].hasGame ? 'pointer' : 'not-allowed',
-                        pointerEvents: 'all', opacity: items[active].hasGame ? 1 : 0.6,
-                        position: 'relative'
-                      }}
-                    >
-                      {items[active].hasGame ? 'Simulasi' : 'Coming Soon'}
-                    </button>
-                  </>}
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center'
+                }}>
+                  {items.length > 0 && items[active] && (
+                    <>
+                      <h1
+                        className="title-in"
+                        style={{
+                          fontSize: '32px',
+                          fontWeight: 500,
+                          marginBottom: '-8px'
+                        }}
+                      >
+                        {items[active].title}
+                      </h1>
+                      <p
+                        className="desc-in"
+                        style={{
+                          fontSize: '18px',
+                          marginBottom: '44px',
+                          color: '#808080'
+                        }}
+                      >
+                        {items[active].desc}
+                      </p>
+                      <button
+                        className="btn-in"
+                        onClick={() => {
+                          if (!items[active].hasGame) return;
+                          const key = items[active].key;
+
+                          if (key.startsWith('hick')) return startGame('easy');
+                          if (key.startsWith('fitts') && !key.startsWith('fitts-edge')) return openFitts();
+                          if (key.startsWith('jakob')) return openJakob();
+                          if (key.startsWith('miller')) return openMiller(5);
+                          if (key.startsWith('proximity')) return openProximity('tight');
+                          if (key.startsWith('peak-end')) return openPeakEnd('A');
+                          if (key.startsWith('serial-position')) return openSerialPosition();
+                          if (key.startsWith('similarity')) return openSimilarity();
+                          if (key.startsWith('aesthetic-usability')) return openAestheticUsability('basic');
+                          if (key.startsWith('doherty')) return openDoherty(100);
+                          if (key.startsWith('prägnanz')) return openPragnanz('complex');
+                          if (key.startsWith('occam')) return openOccam('long');
+                          if (key.startsWith('click-cost')) return openClickCost('multi');
+                          if (key.startsWith('common-region')) return openCommonRegion();
+                          if (key.startsWith('fitts-edge')) return openFittsEdge();
+                          if (key.startsWith('progressive-disclosure')) return openProgressiveDisclosure('all');
+                          if (key.startsWith('micro-interactions')) return openMicroInteractions('basic');
+                          if (key.startsWith('navigation-primacy')) return openNavigationPrimacy('first');
+                          if (key.startsWith('visibility-status')) return openVisibilityStatus('with');
+                          if (key.startsWith('consistency')) return openConsistency('consistent');
+                        }}
+                        style={{
+                          width: '207px',
+                          padding: '10px 24px',
+                          borderRadius: '16px',
+                          background: items[active].hasGame ? '#8eb940' : '#666666',
+                          color: items[active].hasGame ? '#000000' : '#999999',
+                          fontWeight: 700,
+                          boxShadow: items[active].hasGame
+                            ? '4px 4px 20px rgba(255,255,255,0.10), inset 0 4px 24px rgba(232,244,98,1), inset 4px 0 24px rgba(232,244,98,1)'
+                            : 'none',
+                          outline: '4px solid rgba(255,255,255,0.1)',
+                          cursor: items[active].hasGame ? 'pointer' : 'not-allowed',
+                          pointerEvents: 'all',
+                          opacity: items[active].hasGame ? 1 : 0.6,
+                          position: 'relative'
+                        }}
+                      >
+                        {items[active].hasGame ? 'Simulasi' : 'Coming Soon'}
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
-              <button onClick={handleNext} aria-label="Next" className="nav-btn" style={{ pointerEvents: 'all' }}>›</button>
+              <button
+                onClick={handleNext}
+                aria-label="Next"
+                className="nav-btn"
+                style={{ pointerEvents: 'all' }}
+              >
+                ›
+              </button>
             </div>
           </div>
         </div>
-        
-        {gameType === 'hick' && ( <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, color: '#fff' }}><div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: 20, padding: 40, maxWidth: 600, width: '90%', textAlign: 'center' }}>
-          {gamePhase === 'ready' && (<div><h2 style={{ fontSize: 32, marginBottom: 20 }}>Bersiap!</h2><p style={{ fontSize: 18, marginBottom: 20 }}>{gameMode === 'easy' ? '3 tombol akan muncul' : '12 tombol akan muncul'}</p><p style={{ fontSize: 16, color: '#888' }}>Klik tombol yang disorot dengan warna hijau secepat mungkin!</p></div>)}
-          {gamePhase === 'playing' && (<div><h2 style={{ fontSize: 28, marginBottom: 30 }}>Klik tombol hijau sekarang!</h2><div style={{ display: 'grid', gridTemplateColumns: gameMode === 'easy' ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)', gap: 15, maxWidth: 400, margin: '0 auto' }}>{Array.from({ length: gameMode === 'easy' ? 3 : 12 }, (_, i) => (<button key={i} onClick={() => handleButtonClick(i)} style={{ width: 60, height: 60, borderRadius: 10, border: '2px solid #333', backgroundColor: i === targetButton ? '#8eb940' : '#333', color: i === targetButton ? '#000' : '#fff', fontSize: 16, fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s' }}>{i + 1}</button>))}</div></div>)}
-          {gamePhase === 'result' && (<div><h2 style={{ fontSize: 32, marginBottom: 20 }}>Hasil!</h2><p style={{ fontSize: 20, marginBottom: 20 }}>Waktu reaksi: <strong>{gameResults[gameMode]}ms</strong></p>{gameResults.easy && gameResults.hard ? (<div style={{ marginBottom: 30 }}><h3 style={{ fontSize: 24, marginBottom: 15 }}>Perbandingan:</h3><div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: 20 }}><div><p style={{ fontSize: 16, color: '#888' }}>3 Opsi</p><p style={{ fontSize: 20, fontWeight: 'bold' }}>{gameResults.easy}ms</p></div><div><p style={{ fontSize: 16, color: '#888' }}>12 Opsi</p><p style={{ fontSize: 20, fontWeight: 'bold' }}>{gameResults.hard}ms</p></div></div><p style={{ fontSize: 16, color: '#8eb940' }}>{gameResults.hard > gameResults.easy ? `Dengan 12 opsi, Anda ${gameResults.hard - gameResults.easy}ms lebih lambat!` : 'Hasil tidak sesuai ekspektasi Hick\'s Law'}</p><div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: 12, padding: 16, marginTop: 20 }}><h4 style={{ fontSize: 18, marginBottom: 8, color: '#8eb940' }}>💡 Lesson Learned</h4><p style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.9 }}><strong>Hick's Law terbukti:</strong> Semakin banyak pilihan, semakin lama waktu pengambilan keputusan. Dalam desain UI, batasi opsi menu, gunakan progressive disclosure, dan kelompokkan pilihan yang mirip untuk mengurangi cognitive load.</p></div></div>) : (<p style={{ fontSize: 16, marginBottom: 30 }}>{gameMode === 'easy' ? 'Sekarang coba dengan 12 opsi untuk membandingkan!' : 'Sekarang coba dengan 3 opsi untuk membandingkan!'}</p>)}<div style={{ display: 'flex', gap: 15, justifyContent: 'center' }}>{!gameResults.easy && (<button onClick={() => startGame('easy')} style={{ padding: '12px 24px', borderRadius: 10, background: '#8eb940', color: '#000', border: 'none', fontWeight: 'bold' }}>Coba 3 Opsi</button>)}
-            {!gameResults.hard && (<button onClick={() => startGame('hard')} style={{ padding: '12px 24px', borderRadius: 10, background: '#8eb940', color: '#000', border: 'none', fontWeight: 'bold' }}>Coba 12 Opsi</button>)}
-            <button onClick={() => setGameType(null)} style={{ padding: '12px 24px', borderRadius: 10, background: '#333', color: '#fff', border: '1px solid #555', fontWeight: 'bold' }}>Tutup</button></div></div>)}
-        </div></div>)}
-        {gameType === 'fitts' && (<div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, color: '#fff' }}><div style={{ position: 'relative', width: '100%', height: '100%' }}>{fittsResult.nearLarge == null && (<><p style={{ position: 'absolute', top: 20, width: '100%', textAlign: 'center' }}>Klik lingkaran hijau besar sedekat ini secepat mungkin</p><button onClick={() => setFittsStart(Date.now())} style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', padding: '10px 20px', borderRadius: 8, background: '#333', border: '1px solid #555', color: '#fff' }}>Start</button>{fittsStart && (<div onClick={() => { setFittsResult(r => ({ ...r, nearLarge: Date.now() - fittsStart })); setFittsStart(null); }} style={{ position: 'absolute', left: '54%', top: '52%', width: 140, height: 140, borderRadius: '50%', background: '#8eb940', cursor: 'pointer' }} />)}</>)}{fittsResult.nearLarge != null && fittsResult.farSmall == null && (<><p style={{ position: 'absolute', top: 20, width: '100%', textAlign: 'center' }}>Sekarang klik lingkaran hijau kecil di pojok kiri bawah</p>{!fittsStart && (<button onClick={() => setFittsStart(Date.now())} style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', padding: '10px 20px', borderRadius: 8, background: '#333', border: '1px solid #555', color: '#fff' }}>Start</button>)}{fittsStart && (<div onClick={() => { setFittsResult(r => ({ ...r, farSmall: Date.now() - fittsStart })); setFittsStart(null); }} style={{ position: 'absolute', left: 20, bottom: 20, width: 40, height: 40, borderRadius: '50%', background: '#8eb940', cursor: 'pointer' }} />)}</>)}{fittsResult.nearLarge != null && fittsResult.farSmall != null && (<div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' }}><div style={{ textAlign: 'center', background: '#1a1a1a', border: '1px solid #333', borderRadius: 16, padding: 24, maxWidth: 500 }}><h2 style={{ fontSize: 28, marginBottom: 12 }}>Hasil Fitts's Law</h2><p>Target dekat besar: <b>{fittsResult.nearLarge}ms</b></p><p>Target jauh kecil: <b>{fittsResult.farSmall}ms</b></p><div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '12px', padding: '16px', marginTop: '20px' }}><h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>💡 Lesson Learned:</h4><p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}><strong>Fitts's Law terbukti:</strong> Target yang lebih besar dan lebih dekat lebih mudah dicapai. Dalam desain UI, letakkan tombol penting di area yang mudah dijangkau, buat tombol cukup besar untuk mobile, dan manfaatkan edge screen untuk target yang sering digunakan.</p></div><button onClick={() => { setGameType(null); }} style={{ marginTop: 20, padding: '10px 20px', borderRadius: 10, background: '#8eb940', color: '#000', border: 'none', fontWeight: 'bold' }}>Tutup</button></div></div>)}</div></div>)}
-        {gameType === 'jakob' && (<div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, color: '#fff' }}><div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: 16, padding: 24, width: 520 }}><h2 style={{ fontSize: 24, marginBottom: 12 }}>Cari dan klik "Profile"</h2><p style={{ opacity: .8, marginBottom: 16 }}>{jakobMode === 'normal' ? 'Menu familiar' : 'Menu unik/abstrak'} — klik secepatnya.</p>{jakobMode === 'normal' ? (<div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 16 }}><button onClick={() => setJakobStart(Date.now())} style={{ padding: '6px 10px', borderRadius: 8, background: '#333', border: '1px solid #555', color: '#fff' }}>Start</button><button onClick={() => { if (!jakobStart) return; setJakobResult(r => ({ ...r, normal: Date.now() - jakobStart })); setJakobStart(null); setJakobMode('unique'); setTimeout(() => setJakobStart(Date.now()), 300); }} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}><span role="img" aria-label="home">🏠</span> Home</button><button onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}><span role="img" aria-label="settings">⚙️</span> Settings</button><button onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}><span role="img" aria-label="help">❓</span> Help</button><button onClick={() => { if (!jakobStart) return; setJakobResult(r => ({ ...r, normal: Date.now() - jakobStart })); setJakobStart(null); setJakobMode('unique'); setTimeout(() => setJakobStart(Date.now()), 300); }} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}><span role="img" aria-label="profile">👤</span> Profile</button></div>) : (<div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 16 }}><button onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))} style={{ padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}>◼︎◻︎</button><button onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))} style={{ padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}>⌘⌥</button><button onClick={() => setJakobResult(r => ({ ...r, unique: Date.now() - jakobStart }))} style={{ padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}>◎○</button><button onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))} style={{ padding: '10px 14px', borderRadius: 12, background: '#222', border: '1px solid #555', color: '#fff', cursor: 'pointer' }}>△◇</button></div>)}
-              {(jakobResult.normal != null && jakobResult.unique != null) && (<div style={{ textAlign: 'center', marginTop: 12 }}><p>Familiar (normal): <b>{jakobResult.normal}ms</b></p><p>Unik/abstrak: <b>{jakobResult.unique}ms</b></p><p>Errors: <b>{jakobResult.errors}</b></p><div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '12px', padding: '16px', marginTop: '16px' }}><h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>💡 Lesson Learned:</h4><p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}><strong>Jakob's Law terbukti:</strong> Interface familiar lebih mudah digunakan daripada yang unik/abstrak. User mengharapkan pola yang sudah dikenal. Gunakan ikon standar (🏠 untuk home, 👤 untuk profile), letakkan elemen di posisi yang diharapkan, dan hindari desain yang terlalu kreatif untuk fungsi dasar.</p></div><button onClick={() => setGameType(null)} style={{ marginTop: 16, padding: '10px 16px', borderRadius: 10, background: '#8eb940', color: '#000', border: 'none', fontWeight: 'bold' }}>Tutup</button></div>)}
-            </div>
-          </div>
-        )}
-        {gameType === 'miller' && (
-          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, color: '#fff' }}>
-            <div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: 16, padding: 24, width: 520, textAlign: 'center' }}>
-              <h2 style={{ fontSize: 24, marginBottom: 12 }}>Ingat urutan angka</h2>
-              {millerShown ? (<div style={{ fontSize: 32, letterSpacing: 2, margin: '16px 0' }}>{millerSeq}</div>) : (<>
-                <input value={millerInput} onChange={e => setMillerInput(e.target.value)} placeholder="Ketik ulang di sini" style={{ width: '100%', padding: '10px 12px', borderRadius: 10, border: '1px solid #555', background: '#111', color: '#fff', marginBottom: 12 }} />
-                <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
-                  <button onClick={() => { if (millerSeq.length === 5) setMillerResult(r => ({ ...r, five: { correct: millerInput === millerSeq, ms: Date.now() - millerStart } })); else setMillerResult(r => ({ ...r, ten: { correct: millerInput === millerSeq, ms: Date.now() - millerStart } })); }} style={{ padding: '10px 16px', borderRadius: 10, background: '#8eb940', color: '#000', border: 'none', fontWeight: 'bold' }}>Submit</button>
-                  {(!millerResult.five || !millerResult.ten) && (<button onClick={() => openMiller(millerSeq.length === 5 ? 10 : 5)} style={{ padding: '10px 16px', borderRadius: 10, background: '#333', color: '#fff', border: '1px solid #555' }}>Coba {millerSeq.length === 5 ? '10' : '5'} Item</button>)}
-                  <button onClick={() => setGameType(null)} style={{ padding: '10px 16px', borderRadius: 10, background: '#333', color: '#fff', border: '1px solid #555' }}>Tutup</button>
+
+        {gameType === 'hick' && (
+          <div style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            color: '#fff'
+          }}>
+            <div style={{
+              background: '#1a1a1a',
+              border: '1px solid #333',
+              borderRadius: 20,
+              padding: 40,
+              maxWidth: 600,
+              width: '90%',
+              textAlign: 'center'
+            }}>
+              {gamePhase === 'ready' && (
+                <div>
+                  <h2 style={{ fontSize: 32, marginBottom: 20 }}>Bersiap!</h2>
+                  <p style={{ fontSize: 18, marginBottom: 20 }}>
+                    {gameMode === 'easy' ? '3 tombol akan muncul' : '12 tombol akan muncul'}
+                  </p>
+                  <p style={{ fontSize: 16, color: '#888' }}>
+                    Klik tombol yang disorot dengan warna hijau secepat mungkin!
+                  </p>
                 </div>
-                {(millerResult.five || millerResult.ten) && (<div style={{ marginTop: 12, textAlign: 'left' }}>{millerResult.five && <p>5 item: <b>{millerResult.five.ms}ms</b> — {millerResult.five.correct ? 'Benar' : 'Salah'}</p>}{millerResult.ten && <p>10 item: <b>{millerResult.ten.ms}ms</b> — {millerResult.ten.correct ? 'Benar' : 'Salah'}</p>}<div style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: '12px', padding: '16px', marginTop: '16px' }}><h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>💡 Lesson Learned:</h4><p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}><strong>Miller's Law terbukti:</strong> Short-term memory manusia terbatas pada 7±2 item. Dalam desain UI, batasi menu utama maksimal 7 item, gunakan chunking untuk mengelompokkan informasi, dan berikan feedback visual untuk membantu user mengingat status atau progress.</p></div></div>)}
-              </>)}
+              )}
+              {gamePhase === 'playing' && (
+                <div>
+                  <h2 style={{ fontSize: 28, marginBottom: 30 }}>Klik tombol hijau sekarang!</h2>
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: gameMode === 'easy' ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)',
+                    gap: 15,
+                    maxWidth: 400,
+                    margin: '0 auto'
+                  }}>
+                    {Array.from({ length: gameMode === 'easy' ? 3 : 12 }, (_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => handleButtonClick(i)}
+                        style={{
+                          width: 60,
+                          height: 60,
+                          borderRadius: 10,
+                          border: '2px solid #333',
+                          backgroundColor: i === targetButton ? '#8eb940' : '#333',
+                          color: i === targetButton ? '#000' : '#fff',
+                          fontSize: 16,
+                          fontWeight: 'bold',
+                          cursor: 'pointer',
+                          transition: 'all 0.2s'
+                        }}
+                      >
+                        {i + 1}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {gamePhase === 'result' && (
+                <div>
+                  <h2 style={{ fontSize: 32, marginBottom: 20 }}>Hasil!</h2>
+                  <p style={{ fontSize: 20, marginBottom: 20 }}>
+                    Waktu reaksi: <strong>{gameResults[gameMode]}ms</strong>
+                  </p>
+                  {gameResults.easy && gameResults.hard ? (
+                    <div style={{ marginBottom: 30 }}>
+                      <h3 style={{ fontSize: 24, marginBottom: 15 }}>Perbandingan:</h3>
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        marginBottom: 20
+                      }}>
+                        <div>
+                          <p style={{ fontSize: 16, color: '#888' }}>3 Opsi</p>
+                          <p style={{ fontSize: 20, fontWeight: 'bold' }}>{gameResults.easy}ms</p>
+                        </div>
+                        <div>
+                          <p style={{ fontSize: 16, color: '#888' }}>12 Opsi</p>
+                          <p style={{ fontSize: 20, fontWeight: 'bold' }}>{gameResults.hard}ms</p>
+                        </div>
+                      </div>
+                      <p style={{ fontSize: 16, color: '#8eb940' }}>
+                        {gameResults.hard > gameResults.easy
+                          ? `Dengan 12 opsi, Anda ${gameResults.hard - gameResults.easy}ms lebih lambat!`
+                          : 'Hasil tidak sesuai ekspektasi Hick\'s Law'}
+                      </p>
+                      <div style={{
+                        background: '#1a1a1a',
+                        border: '1px solid #333',
+                        borderRadius: 12,
+                        padding: 16,
+                        marginTop: 20
+                      }}>
+                        <h4 style={{
+                          fontSize: 18,
+                          marginBottom: 8,
+                          color: '#8eb940'
+                        }}>
+                          💡 Lesson Learned
+                        </h4>
+                        <p style={{ fontSize: 14, lineHeight: 1.5, opacity: 0.9 }}>
+                          <strong>Hick's Law terbukti:</strong> Semakin banyak pilihan, semakin lama waktu pengambilan keputusan. Dalam desain UI, batasi opsi menu, gunakan progressive disclosure, dan kelompokkan pilihan yang mirip untuk mengurangi cognitive load.
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <p style={{ fontSize: 16, marginBottom: 30 }}>
+                      {gameMode === 'easy'
+                        ? 'Sekarang coba dengan 12 opsi untuk membandingkan!'
+                        : 'Sekarang coba dengan 3 opsi untuk membandingkan!'}
+                    </p>
+                  )}
+                  <div style={{ display: 'flex', gap: 15, justifyContent: 'center' }}>
+                    {!gameResults.easy && (
+                      <button
+                        onClick={() => startGame('easy')}
+                        style={{
+                          padding: '12px 24px',
+                          borderRadius: 10,
+                          background: '#8eb940',
+                          color: '#000',
+                          border: 'none',
+                          fontWeight: 'bold'
+                        }}
+                      >
+                        Coba 3 Opsi
+                      </button>
+                    )}
+                    {!gameResults.hard && (
+                      <button
+                        onClick={() => startGame('hard')}
+                        style={{
+                          padding: '12px 24px',
+                          borderRadius: 10,
+                          background: '#8eb940',
+                          color: '#000',
+                          border: 'none',
+                          fontWeight: 'bold'
+                        }}
+                      >
+                        Coba 12 Opsi
+                      </button>
+                    )}
+                    <button
+                      onClick={() => setGameType(null)}
+                      style={{
+                        padding: '12px 24px',
+                        borderRadius: 10,
+                        background: '#333',
+                        color: '#fff',
+                        border: '1px solid #555',
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}
+
+        {gameType === 'fitts' && (
+          <div style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            color: '#fff'
+          }}>
+            <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+              {fittsResult.nearLarge == null && (
+                <>
+                  <p style={{
+                    position: 'absolute',
+                    top: 20,
+                    width: '100%',
+                    textAlign: 'center'
+                  }}>
+                    Klik lingkaran hijau besar sedekat ini secepat mungkin
+                  </p>
+                  <button
+                    onClick={() => setFittsStart(Date.now())}
+                    style={{
+                      position: 'absolute',
+                      left: '50%',
+                      top: '50%',
+                      transform: 'translate(-50%,-50%)',
+                      padding: '10px 20px',
+                      borderRadius: 8,
+                      background: '#333',
+                      border: '1px solid #555',
+                      color: '#fff'
+                    }}
+                  >
+                    Start
+                  </button>
+                  {fittsStart && (
+                    <div
+                      onClick={() => {
+                        const reactionTime = Date.now() - fittsStart;
+                        setFittsResult(r => ({ ...r, nearLarge: reactionTime }));
+                        setFittsStart(null);
+                        if (user) {
+                          saveSimulation('fitts', { gameMode: 'nearLarge', reactionTime });
+                          saveProgress('fitts', { bestTime: reactionTime });
+                        }
+                      }}
+                      style={{
+                        position: 'absolute',
+                        left: '54%',
+                        top: '52%',
+                        width: 140,
+                        height: 140,
+                        borderRadius: '50%',
+                        background: '#8eb940',
+                        cursor: 'pointer'
+                      }}
+                    />
+                  )}
+                </>
+              )}
+              {fittsResult.nearLarge != null && fittsResult.farSmall == null && (
+                <>
+                  <p style={{
+                    position: 'absolute',
+                    top: 20,
+                    width: '100%',
+                    textAlign: 'center'
+                  }}>
+                    Sekarang klik lingkaran hijau kecil di pojok kiri bawah
+                  </p>
+                  {!fittsStart && (
+                    <button
+                      onClick={() => setFittsStart(Date.now())}
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        top: '50%',
+                        transform: 'translate(-50%,-50%)',
+                        padding: '10px 20px',
+                        borderRadius: 8,
+                        background: '#333',
+                        border: '1px solid #555',
+                        color: '#fff'
+                      }}
+                    >
+                      Start
+                    </button>
+                  )}
+                  {fittsStart && (
+                    <div
+                      onClick={() => {
+                        const reactionTime = Date.now() - fittsStart;
+                        setFittsResult(r => ({ ...r, farSmall: reactionTime }));
+                        setFittsStart(null);
+                        if (user) {
+                          saveSimulation('fitts', { gameMode: 'farSmall', reactionTime });
+                          saveProgress('fitts', { bestTime: reactionTime });
+                        }
+                      }}
+                      style={{
+                        position: 'absolute',
+                        left: 20,
+                        bottom: 20,
+                        width: 40,
+                        height: 40,
+                        borderRadius: '50%',
+                        background: '#8eb940',
+                        cursor: 'pointer'
+                      }}
+                    />
+                  )}
+                </>
+              )}
+              {fittsResult.nearLarge != null && fittsResult.farSmall != null && (
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  display: 'grid',
+                  placeItems: 'center'
+                }}>
+                  <div style={{
+                    textAlign: 'center',
+                    background: '#1a1a1a',
+                    border: '1px solid #333',
+                    borderRadius: 16,
+                    padding: 24,
+                    maxWidth: 500
+                  }}>
+                    <h2 style={{ fontSize: 28, marginBottom: 12 }}>Hasil Fitts's Law</h2>
+                    <p>Target dekat besar: <b>{fittsResult.nearLarge}ms</b></p>
+                    <p>Target jauh kecil: <b>{fittsResult.farSmall}ms</b></p>
+                    <div style={{
+                      background: '#1a1a1a',
+                      border: '1px solid #333',
+                      borderRadius: '12px',
+                      padding: '16px',
+                      marginTop: '20px'
+                    }}>
+                      <h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>
+                        💡 Lesson Learned:
+                      </h4>
+                      <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}>
+                        <strong>Fitts's Law terbukti:</strong> Target yang lebih besar dan lebih dekat lebih mudah dicapai. Dalam desain UI, letakkan tombol penting di area yang mudah dijangkau, buat tombol cukup besar untuk mobile, dan manfaatkan edge screen untuk target yang sering digunakan.
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setGameType(null)}
+                      style={{
+                        marginTop: 20,
+                        padding: '10px 20px',
+                        borderRadius: 10,
+                        background: '#8eb940',
+                        color: '#000',
+                        border: 'none',
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {gameType === 'jakob' && (
+          <div style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            color: '#fff'
+          }}>
+            <div style={{
+              background: '#1a1a1a',
+              border: '1px solid #333',
+              borderRadius: 16,
+              padding: 24,
+              width: 520
+            }}>
+              <h2 style={{ fontSize: 24, marginBottom: 12 }}>Cari dan klik "Profile"</h2>
+              <p style={{ opacity: .8, marginBottom: 16 }}>
+                {jakobMode === 'normal' ? 'Menu familiar' : 'Menu unik/abstrak'} — klik secepatnya.
+              </p>
+              {jakobMode === 'normal' ? (
+                <div style={{
+                  display: 'flex',
+                  gap: 12,
+                  justifyContent: 'center',
+                  marginBottom: 16
+                }}>
+                  <button
+                    onClick={() => setJakobStart(Date.now())}
+                    style={{
+                      padding: '6px 10px',
+                      borderRadius: 8,
+                      background: '#333',
+                      border: '1px solid #555',
+                      color: '#fff'
+                    }}
+                  >
+                    Start
+                  </button>
+                  <button
+                    onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <span role="img" aria-label="home">🏠</span> Home
+                  </button>
+                  <button
+                    onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <span role="img" aria-label="settings">⚙️</span> Settings
+                  </button>
+                  <button
+                    onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <span role="img" aria-label="help">❓</span> Help
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (!jakobStart) return;
+                      const reactionTime = Date.now() - jakobStart;
+                      setJakobResult(r => ({ ...r, normal: reactionTime }));
+                      setJakobStart(null);
+                      setJakobMode('unique');
+                      if (user) {
+                        saveSimulation('jakob', { gameMode: 'normal', reactionTime });
+                        saveProgress('jakob', { bestTime: reactionTime });
+                      }
+                      setTimeout(() => setJakobStart(Date.now()), 300);
+                    }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <span role="img" aria-label="profile">👤</span> Profile
+                  </button>
+                </div>
+              ) : (
+                <div style={{
+                  display: 'flex',
+                  gap: 12,
+                  justifyContent: 'center',
+                  marginBottom: 16
+                }}>
+                  <button
+                    onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))}
+                    style={{
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    ◼︎◻︎
+                  </button>
+                  <button
+                    onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))}
+                    style={{
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    ⌘⌥
+                  </button>
+                  <button
+                    onClick={() => {
+                      const reactionTime = Date.now() - jakobStart;
+                      setJakobResult(r => ({ ...r, unique: reactionTime }));
+                      if (user) {
+                        saveSimulation('jakob', { gameMode: 'unique', reactionTime });
+                        saveProgress('jakob', { bestTime: reactionTime });
+                      }
+                    }}
+                    style={{
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    ◎○
+                  </button>
+                  <button
+                    onClick={() => setJakobResult(r => ({ ...r, errors: r.errors + 1 }))}
+                    style={{
+                      padding: '10px 14px',
+                      borderRadius: 12,
+                      background: '#222',
+                      border: '1px solid #555',
+                      color: '#fff',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    △◇
+                  </button>
+                </div>
+              )}
+              {(jakobResult.normal != null && jakobResult.unique != null) && (
+                <div style={{ textAlign: 'center', marginTop: 12 }}>
+                  <p>Familiar (normal): <b>{jakobResult.normal}ms</b></p>
+                  <p>Unik/abstrak: <b>{jakobResult.unique}ms</b></p>
+                  <p>Errors: <b>{jakobResult.errors}</b></p>
+                  <div style={{
+                    background: '#1a1a1a',
+                    border: '1px solid #333',
+                    borderRadius: '12px',
+                    padding: '16px',
+                    marginTop: '16px'
+                  }}>
+                    <h4 style={{
+                      fontSize: '18px',
+                      marginBottom: '8px',
+                      color: '#8eb940'
+                    }}>
+                      💡 Lesson Learned:
+                    </h4>
+                    <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}>
+                      <strong>Jakob's Law terbukti:</strong> Interface familiar lebih mudah digunakan daripada yang unik/abstrak. User mengharapkan pola yang sudah dikenal. Gunakan ikon standar (🏠 untuk home, 👤 untuk profile), letakkan elemen di posisi yang diharapkan, dan hindari desain yang terlalu kreatif untuk fungsi dasar.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setGameType(null)}
+                    style={{
+                      marginTop: 16,
+                      padding: '10px 16px',
+                      borderRadius: 10,
+                      background: '#8eb940',
+                      color: '#000',
+                      border: 'none',
+                      fontWeight: 'bold'
+                    }}
+                  >
+                    Tutup
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {gameType === 'miller' && (
+          <div style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            color: '#fff'
+          }}>
+            <div style={{
+              background: '#1a1a1a',
+              border: '1px solid #333',
+              borderRadius: 16,
+              padding: 24,
+              width: 520,
+              textAlign: 'center'
+            }}>
+              <h2 style={{ fontSize: 24, marginBottom: 12 }}>Ingat urutan angka</h2>
+              {millerShown ? (
+                <div style={{ fontSize: 32, letterSpacing: 2, margin: '16px 0' }}>{millerSeq}</div>
+              ) : (
+                <>
+                  <input
+                    value={millerInput}
+                    onChange={e => setMillerInput(e.target.value)}
+                    placeholder="Ketik ulang di sini"
+                    style={{
+                      width: '100%',
+                      padding: '10px 12px',
+                      borderRadius: 10,
+                      border: '1px solid #555',
+                      background: '#111',
+                      color: '#fff',
+                      marginBottom: 12
+                    }}
+                  />
+                  <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
+                    <button
+                      onClick={() => {
+                        const result = {
+                          correct: millerInput === millerSeq,
+                          ms: Date.now() - millerStart
+                        };
+                        const gameMode = millerSeq.length === 5 ? 'five' : 'ten';
+                        setMillerResult(r => ({ ...r, [gameMode]: result }));
+                        if (user) {
+                          saveSimulation('miller', {
+                            gameMode,
+                            reactionTime: result.ms,
+                            correct: result.correct
+                          });
+                          saveProgress('miller', { bestTime: result.ms });
+                        }
+                      }}
+                      style={{
+                        padding: '10px 16px',
+                        borderRadius: 10,
+                        background: '#8eb940',
+                        color: '#000',
+                        border: 'none',
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      Submit
+                    </button>
+                    {(!millerResult.five || !millerResult.ten) && (
+                      <button
+                        onClick={() => openMiller(millerSeq.length === 5 ? 10 : 5)}
+                        style={{
+                          padding: '10px 16px',
+                          borderRadius: 10,
+                          background: '#333',
+                          color: '#fff',
+                          border: '1px solid #555'
+                        }}
+                      >
+                        Coba {millerSeq.length === 5 ? '10' : '5'} Item
+                      </button>
+                    )}
+                    <button
+                      onClick={() => setGameType(null)}
+                      style={{
+                        padding: '10px 16px',
+                        borderRadius: 10,
+                        background: '#333',
+                        color: '#fff',
+                        border: '1px solid #555'
+                      }}
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                  {(millerResult.five || millerResult.ten) && (
+                    <div style={{ marginTop: 12, textAlign: 'left' }}>
+                      {millerResult.five && (
+                        <p>
+                          5 item: <b>{millerResult.five.ms}ms</b> — {millerResult.five.correct ? 'Benar' : 'Salah'}
+                        </p>
+                      )}
+                      {millerResult.ten && (
+                        <p>
+                          10 item: <b>{millerResult.ten.ms}ms</b> — {millerResult.ten.correct ? 'Benar' : 'Salah'}
+                        </p>
+                      )}
+                      <div style={{
+                        background: '#1a1a1a',
+                        border: '1px solid #333',
+                        borderRadius: '12px',
+                        padding: '16px',
+                        marginTop: '16px'
+                      }}>
+                        <h4 style={{ fontSize: '18px', marginBottom: '8px', color: '#8eb940' }}>
+                          💡 Lesson Learned:
+                        </h4>
+                        <p style={{ fontSize: '14px', lineHeight: '1.5', opacity: '0.9' }}>
+                          <strong>Miller's Law terbukti:</strong> Short-term memory manusia terbatas pada 7±2 item. Dalam desain UI, batasi menu utama maksimal 7 item, gunakan chunking untuk mengelompokkan informasi, dan berikan feedback visual untuk membantu user mengingat status atau progress.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
+        )}
+
         {gameType === 'proximity' && (
           <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, color: '#fff' }}>
             <div className="overlay-card" style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: 16, padding: 24, width: 840 }}>
@@ -681,22 +1634,15 @@ function LawsPage() {
             </div>
           </div>
         )}
-        {gameType === 'similarity' && (
-          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, color: '#fff' }}>
-            <div className="overlay-card" style={{ background: '#1a1a1a', border: '1px solid #333', borderRadius: 16, padding: 24, width: 600 }}>
-              <h2 style={{ fontSize: 24, marginBottom: 12 }}>Kelompokkan item yang menurutmu fungsi/arti sama</h2>
-              <p style={{ opacity: .8, marginBottom: 16 }}>Drag item ke kelompok yang sesuai</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 20 }}>
-                {similarityItems.map(item => (<div key={item.id} style={{ padding: 16, background: item.color === 'blue' ? '#2D9CDB' : item.color === 'red' ? '#E74C3C' : '#27AE60', borderRadius: item.shape === 'round' ? 20 : 8, textAlign: 'center', cursor: 'pointer' }}>{item.type}</div>))}
-              </div>
-              <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
-                <button onClick={() => setGameType(null)} style={{ padding: '10px 16px', borderRadius: 10, background: '#333', color: '#fff', border: '1px solid #555' }}>Tutup</button>
-              </div>
-            </div>
-          </div>
-        )}
 
-        <section style={{ maxWidth: '56rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'left', padding: '0 20px 40px', marginTop: '-280px' }}>
+        <section style={{
+          maxWidth: '56rem',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          textAlign: 'left',
+          padding: '0 20px 40px',
+          marginTop: '-280px'
+        }}>
           {items.length > 0 && items[active] && (
             <DetailedExplanation law={items[active]} />
           )}
